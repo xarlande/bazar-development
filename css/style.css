@@ -1,0 +1,242 @@
+@import url(_reset.css);
+@import url(_var.css);
+@import url(_fonts.css);
+
+body {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: rgba(25, 25, 25, 0.74);
+  backdrop-filter: blur(5.5px);
+  border-bottom: var(--green-color) 1px solid;
+}
+
+nav {
+  border-radius: 50px;
+  background: #252529;
+  padding: 16px 64px;
+  display: flex;
+  gap: 40px;
+}
+nav a {
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--green-color);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1360px;
+}
+
+.header-body {
+  padding: 23px 40px;
+  display: flex;
+  gap: 95px;
+  justify-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: var(--green-color) 1px solid;
+  color: var(--green-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: Open Sans;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.button-active {
+  color: #252529 !important;
+  background-color: var(--green-color) !important;
+}
+
+.button-rounded {
+  border: var(--green-color) 1px solid;
+  border-radius: 100%;
+  width: 53px;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.hero {
+  border-radius: 32px;
+  background: rgba(34, 34, 35, 0.44);
+  backdrop-filter: blur(6.5px);
+  margin-top: 120px;
+  margin-bottom: 105px;
+  padding: 115.415px 68.737px 79.116px 96px;
+}
+.hero-title {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: DM Sans;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.hero-description {
+  color: #b7b7b7;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 705px;
+}
+.hero-content {
+  max-width: 981px;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 56px;
+}
+
+#services {
+  background: #1f1f20;
+  padding: 72px 40px;
+}
+
+.h2-title {
+  font-family: Open Sans;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text-green {
+  color: var(--green-color);
+}
+
+.services-block-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 32px 0;
+}
+
+.services-block-cards {
+  display: flex;
+  gap: 40px;
+}
+.services-block-card {
+  width: 427px;
+  height: 427px;
+  background-color: #363638;
+}
+.services-block-navigation {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 68px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+}
+.about-content {
+  margin-top: 71px;
+}
+.about-description {
+  color: #ccc;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Open Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 48px;
+}
+
+.moving-tape {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.moving-tape p {
+  leading-trim: both;
+  text-edge: cap;
+  font-family: DM Sans;
+  font-size: 219px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 91.7%; /* 200.823px */
+  text-transform: uppercase;
+  user-select: none;
+  background: -webkit-linear-gradient(180deg, #595955 0%, #889014 92.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
