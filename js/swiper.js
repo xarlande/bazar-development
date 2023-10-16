@@ -1,8 +1,7 @@
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10.3.1/+esm";
-
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper("#swiper-services", {
   slidesPerView: 1,
   loop: true,
+  spaceBetween: 40,
   breakpoints: {
     840: {
       slidesPerView: 2,

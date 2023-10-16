@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10.3.1/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
   </head>
   <body>
     <header>
-      <div class="container header-body">
+      <div class="container header">
         <img src="./image/logo.svg" alt="logo" />
-        <div class="header-nav">
+        <div class="nav-block">
           <nav>
             <a href="index.html">Home</a>
             <a href="index.html">Services</a>
@@ -22,7 +22,7 @@
             <a href="index.html">blog</a>
             <a href="index.html">Contact us</a>
           </nav>
-          <div class="header-buttons">
+          <div class="buttons-block">
             <button class="button">Got a question?</button>
             <button id="button-bazar" class="button button-active">
               Bazar.club
@@ -34,19 +34,19 @@
     </header>
     <main>
       <div id="particles-js"></div>
-      <div class="hero">
-        <div class="container">
-          <div class="hero-content">
-            <h1 class="hero-title">Bazar. development</h1>
-            <p class="hero-description">
+      <div class="container">
+        <div class="hero">
+          <div class="content">
+            <h1 class="title">Bazar. development</h1>
+            <p class="description">
               Up am intention on dependent questions oh elsewhere september. No
               betrayed pleasure possible jointure we in throwing. And can event
               rapid any shall woman green.
             </p>
           </div>
-          <div class="hero-buttons">
-            <button class="button">Discuss the project</button>
-            <button class="button-rounded">
+          <div class="buttons-block">
+            <button class="button button-active">Discuss the project</button>
+            <button class="button-rounded" id="button-scroll-to-end">
               <img
                 style="width: 53px; height: 53px"
                 src="image/button-arrow.svg"
@@ -60,34 +60,34 @@
     <section id="services">
       <div class="container">
         <h2 class="h2-title">// Services we provide</h2>
-        <div class="services-block-buttons">
+        <div class="buttons-block">
           <button class="button">Development</button>
           <button class="button button-active">SEO</button>
           <button class="button">Marketing</button>
         </div>
-        <div class="swiper">
-          <div class="services-block-cards swiper-wrapper">
+        <div id="swiper-services" class="swiper">
+          <div class="block-cards swiper-wrapper">
             <div class="swiper-slide">
-              <div class="services-block-card">1</div>
+              <div class="block-card">1</div>
             </div>
             <div class="swiper-slide">
-              <div class="services-block-card">2</div>
+              <div class="block-card">2</div>
             </div>
             <div class="swiper-slide">
-              <div class="services-block-card">3</div>
+              <div class="block-card">3</div>
             </div>
             <div class="swiper-slide">
-              <div class="services-block-card">4</div>
+              <div class="block-card">4</div>
             </div>
             <div class="swiper-slide">
-              <div class="services-block-card">5</div>
+              <div class="block-card">5</div>
             </div>
             <div class="swiper-slide">
-              <div class="services-block-card">6</div>
+              <div class="block-card">6</div>
             </div>
           </div>
         </div>
-        <div class="services-block-navigation">
+        <div class="navigation-block">
           <button
             class="button-rounded services-button-prev"
             style="rotate: 90deg"
@@ -111,12 +111,12 @@
         </div>
       </div>
     </section>
-    <section id="about">
+    <section no-style id="about">
       <div class="container">
         <div class="about">
-          <div class="about-content">
-            <h1 class="h2-title text-green">// about</h1>
-            <p class="about-description">
+          <div class="content">
+            <h2 class="h2-title text-toxic">// about</h2>
+            <p class="description">
               Up am intention on dependent questions oh elsewhere september. No
               betrayed pleasure possible jointure we in throwing. And can event
               rapid any shall woman green. Hope they dear who its bred. Smiling
@@ -133,9 +133,157 @@
         <p>Bazar. development</p>
       </div>
     </section>
+    <section id="why-us">
+      <div class="container">
+        <h2 class="h2-title">//why us?</h2>
+        sdfsdfsdf
+      </div>
+    </section>
+    <section id="stage-of-cooperation">
+      <div class="container">
+        <div class="header-block">
+          <h2 class="h2-title text-toxic">// stage of cooperation</h2>
+          <p class="description">
+            Up am intention on dependent questions oh elsewhere september. No
+            betrayed pleasure possible jointure we in throwing. And can event
+            rapid any shall woman green. Hope they dear who its bred. Smiling
+            nothing affixed he carried it clothes calling he no.
+          </p>
+        </div>
+        <div class="content">
+          <div class="item">
+            <div class="content-block">
+              <p class="title">// step 1</p>
+              <div class="block">
+                <p class="title">Contact</p>
+                <p class="description">
+                  Contact us through our website or contact information to
+                  initiate discussions about your needs, project, or idea.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content-block">
+              <p class="title">// step 2</p>
+              <div class="block">
+                <p class="title">Consult</p>
+                <p class="description">
+                  Conduct a consultation to better understand your business,
+                  goals, project requirements, and determine the optimal
+                  collaboration approach.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content-block">
+              <p class="title">// step 3</p>
+              <div class="block">
+                <p class="title">Develop</p>
+                <p class="description">
+                  Develop a customized plan and implementation strategy
+                  considering your needs and budget to achieve the most
+                  effective outcome.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content-block">
+              <p class="title">// step 4</p>
+              <div class="block">
+                <p class="title">Satisfaction</p>
+                <p class="description">
+                  Implement the project, providing you with high-quality IT
+                  solutions to ensure you are fully satisfied with the
+                  collaboration with our team
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="work-with-us">
+      <div class="container">
+        <div>
+          <h2 class="h2-title">// work with us</h2>
+          <p class="title">Do you want to start cooperation with us?</p>
+          <p class="description">
+            Excellence put unaffected reasonable mrs introduced conviction she.
+            Nay particular delightful but unpleasant for uncommonly who.Placing
+            assured be if removed it besides on. Far shed each high read are men
+            over day.
+          </p>
+        </div>
+        <div class="chevron-block">
+          <div class="chevrons">
+            <img src="./image/ion_chevron-forward-outline.svg" alt="chevron" />
+            <img src="./image/ion_chevron-forward-outline.svg" alt="chevron" />
+            <img src="./image/ion_chevron-forward-outline.svg" alt="chevron" />
+            <img src="./image/ion_chevron-forward-outline.svg" alt="chevron" />
+            <img src="./image/ion_chevron-forward-outline.svg" alt="chevron" />
+            <img src="./image/ion_chevron-forward-outline.svg" alt="chevron" />
+          </div>
+        </div>
+        <div class="button-block">
+          <button class="button">Discuss the project</button>
+        </div>
+      </div>
+    </section>
+    <section id="our-projects">
+      <div class="container">
+        <h2 class="h2-title">//our projects</h2>
+        <div class="buttons-block">
+          <button class="button">Technical SEO Audit</button>
+          <button class="button button-active">Technical SEO Audit</button>
+          <button class="button">Technical SEO Audit</button>
+          <button class="button">view all projects</button>
+        </div>
+      </div>
+    </section>
+    <section id="faq">
+      <div class="container">
+        <h2 class="h2-title text-toxic">// faq?</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="button-rounded button-active">
+              <img src="./image/button-arrow-black.svg" active alt="button" />
+              <img
+                src="./image/button-arrow-toxic.svg"
+                no-active
+                alt="button"
+              />
+            </button>
+          </div>
+          <div class="faq-item">
+            <button class="button-rounded button-active">
+              <img src="./image/button-arrow-black.svg" active alt="button" />
+              <img
+                src="./image/button-arrow-toxic.svg"
+                no-active
+                alt="button"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="reviews">
+      <div class="container">
+        <h2 class="h2-title">// Reviews</h2>
+      </div>
+    </section>
+    <section id="order-the-service">
+      <div class="container">
+        <h2 class="h2-title">// Order the service</h2>
+      </div>
+    </section>
     <footer></footer>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-  <script type="module" src="js/modules/swiper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
 </html>
