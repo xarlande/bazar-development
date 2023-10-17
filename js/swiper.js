@@ -1,4 +1,4 @@
-const swiper = new Swiper("#swiper-services", {
+const swiperServices = new Swiper("#swiper-services", {
   slidesPerView: 1,
   loop: true,
   spaceBetween: 40,
@@ -12,8 +12,29 @@ const swiper = new Swiper("#swiper-services", {
   },
 });
 
-const buttonNext = document.querySelector(".services-button-next");
-const buttonPrev = document.querySelector(".services-button-prev");
+const servicesButtonNext = document.querySelector(".services-button-next");
+const servicesButtonPrev = document.querySelector(".services-button-prev");
 
-buttonNext.addEventListener("click", () => swiper.slideNext());
-buttonPrev.addEventListener("click", () => swiper.slidePrev());
+servicesButtonNext.addEventListener("click", () => swiperServices.slideNext());
+servicesButtonPrev.addEventListener("click", () => swiperServices.slidePrev());
+
+const swiperReviews = new Swiper('#swiper-reviews', {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 40,
+  breakpoints: {
+    840: {
+      slidesPerView: 2,
+    },
+    1280: {
+      slidesPerView: 4,
+    },
+  },
+})
+
+const reviewsButtonNext = document.querySelector('.reviews-button-next')
+const reviewsButtonPrev = document.querySelector('.reviews-button-prev')
+
+reviewsButtonNext.addEventListener('click', () => swiperReviews.slideNext())
+reviewsButtonPrev.addEventListener('click', () => swiperReviews.slidePrev())
+
