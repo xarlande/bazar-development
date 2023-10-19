@@ -131,7 +131,7 @@ const items = {
 const buttons = document.querySelectorAll("#services .buttons-block button")
 const swiperBody = document.querySelector("#swiper-services .swiper-wrapper");
 
-const swiperServices = new Swiper("#swiper-services", {
+const swiper = new Swiper("#swiper-services", {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 40,
@@ -150,12 +150,12 @@ const servicesButtonPrev = document.querySelector(".services-button-prev");
 
 servicesButtonNext.addEventListener("click", () => {
     if (swiperBody.querySelectorAll('.swiper-slide').length) {
-        swiperServices.slideNext()
+        swiper.slideNext()
     }
 });
 servicesButtonPrev.addEventListener("click", () => {
     if (swiperBody.querySelectorAll('.swiper-slide').length) {
-        swiperServices.slidePrev()
+        swiper.slidePrev()
     }
 })
 
@@ -211,7 +211,7 @@ const generateItemsForSwiper = () => {
     });
     swiperBody.innerHTML = container.innerHTML;
 
-    swiperServices.update()
+    swiper.update()
 };
 
 buttons.forEach(element => {
