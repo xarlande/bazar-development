@@ -9,6 +9,7 @@ body {
 
 a {
   color: $text-default-color;
+  text-decoration: none;
 }
 
 button {
@@ -65,7 +66,6 @@ nav {
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
-    text-decoration: none;
   }
 
   a:hover {
@@ -109,7 +109,7 @@ section[no-style] {
 }
 
 .button-rounded {
-  border: $toxic-color 1px solid;
+  border: none;
   border-radius: 100%;
   width: 53px;
   height: 53px;
@@ -136,7 +136,10 @@ section[no-style] {
   img[no-active] {
     display: block;
   }
+}
 
+.button-rounded[border] {
+  border: $toxic-color 1px solid;
 }
 
 #particles-js {
@@ -194,14 +197,103 @@ section[no-style] {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin: 32px 0;
   }
 
   .block-cards {
     .block-card {
-      width: 427px;
-      height: 427px;
       background-color: $bg-light-gray;
+      border-radius: 56px;
+      padding: 56px 48px;
+      margin: 32px 0;
+      border: 1px solid rgba(255, 0, 0, 0);
+
+      .title-block {
+        color: $toxic-color;
+        font-family: Open Sans;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-bottom: 24px;
+      }
+
+      .main-block {
+        padding: 24px 0;
+        border: {
+          top: $border-darkness-gray 1px solid;
+          bottom: $border-darkness-gray 1px solid;
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          .name {
+            color: $text-light-gray;
+            font-family: Open Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            white-space: nowrap;
+          }
+
+          .value {
+            color: $toxic-color;
+            font-family: Open Sans;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+
+        .item:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .footer-block {
+        padding-top: 24px;
+
+        .footer-text {
+          font-family: Open Sans;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: $text-light-gray;
+        }
+
+        .button {
+          margin-top: 24px;
+          width: 100%;
+
+          &:after {
+            content: url('../image/common/arrow-up-right-green.svg');
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      &:hover {
+        border: 1px solid #D8F520;
+        box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
+
+        .footer-block {
+          .button {
+            @extend .button-active;
+
+            &:after {
+              content: url('../image/common/arrow-up-right.svg');
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -213,13 +305,24 @@ section[no-style] {
   }
 }
 
-.h2-title {
+%title-font {
   font-family: Open Sans;
-  font-size: 40px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+.h2-title {
+  @extend %title-font;
+
+  font-size: 40px;
   text-transform: uppercase;
+}
+
+.h3-title {
+  @extend %title-font;
+
+  font-size: 16px;
 }
 
 .text-toxic {
@@ -235,7 +338,7 @@ section[no-style] {
 
   .about {
     .content {
-      margin-top: 71px;
+      padding-top: 71px;
 
       width: 50%;
 
@@ -481,13 +584,16 @@ section[no-style] {
         color: $toxic-color;
         align-items: center;
         gap: 15px;
-
         font-family: Open Sans;
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         text-transform: uppercase;
+
+        .button-rounded {
+          background: $bg-light-gray;
+        }
       }
 
       .content {
@@ -713,7 +819,7 @@ section[no-style] {
               cursor: pointer;
 
               &:not(:last-child) {
-                border-bottom: $border-otherwise-gray 1px solid;
+                border-bottom: $border-darkness-gray 1px solid;
                 padding-bottom: 16px;
               }
             ;
@@ -781,8 +887,147 @@ section[no-style] {
 
 footer {
   background: $bg-no-light-gray;
-  padding-top: 59px;
-  padding-bottom: 19px;
+
+  .footer-start-block {
+    padding: 60px 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      .about-block {
+        max-width: 310px;
+
+        .title {
+          margin-top: 57px;
+          margin-bottom: 17px;
+        }
+
+        .content {
+          font-family: Open Sans;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      .navigation-block {
+        max-width: 405px;
+        width: 100%;
+        display: flex;
+        gap: 15px;
+
+        .sitemap-block, .services-block {
+          flex: 1;
+
+          h3 {
+            margin-bottom: 16px;
+          }
+
+          a {
+            display: block;
+            font-family: Open Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+          }
+
+          a:before {
+            content: '// ';
+            color: $toxic-color;
+          }
+
+          a:not(:first-child) {
+            padding-top: 8px;
+          }
+
+          a:not(:last-child) {
+            padding-bottom: 8px;
+            border-bottom: $border-darkness-gray 1px solid;
+          }
+        }
+
+        .toxic-tape {
+          width: 1px;
+          margin: {
+            top: 32px;
+            right: 32px;
+            left: 40px;
+          };
+          height: calc(100% - 32px);
+          background-color: $toxic-color;
+        }
+      }
+
+      .contacts-block {
+        max-width: 336px;
+        width: 100%;
+
+        .contact-item {
+          margin: 24px 0;
+
+          .name {
+            color: $text-gray;
+            font-family: Open Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          .value {
+            color: $text-no-white-color;
+            font-family: Open Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+
+        button {
+          padding: 16px;
+        }
+      }
+    }
+  }
+
+  .footer-end-block {
+    padding: 16px 0;
+    border-top: $border-light-gray 1px solid;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .text-block {
+        display: flex;
+        color: $text-gray;
+        height: 27px;
+
+        .first-text {
+          padding-right: 40px;
+          border-right: $border-darkness-gray 1px solid;
+        }
+
+        .last-text {
+          padding-left: 30px;
+        }
+
+        .first-text, .last-text {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .image-block {
+        gap: 8px;
+      }
+    }
+  }
 }
 
 @keyframes marquee {
