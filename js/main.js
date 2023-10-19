@@ -8,11 +8,14 @@ buttonToBazar.addEventListener("click", () => {
 });
 
 const buttonToScrollEnd = document.querySelector("#button-scroll-to-end");
-const servicesBlock = document.querySelector('#services');
 
-buttonToScrollEnd.addEventListener("click", () => {
-  servicesBlock.scrollIntoView({ behavior: "smooth", block: "center" });
-});
+if (buttonToScrollEnd){
+  const firstSection = document.querySelector('section');
+
+  buttonToScrollEnd.addEventListener("click", () => {
+    firstSection.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+}
 
 const stageSteps = document.querySelectorAll(
   "#stage-of-cooperation .container .content .item .content-block",
@@ -58,7 +61,6 @@ selectDropdown.addEventListener('click', (event) => {
 })
 dropdownItems.forEach(component => {
   component.addEventListener('click', () => {
-    console.log('click')
     selectForOrderTheService.classList.remove('select-open')
   })
 })
@@ -68,7 +70,6 @@ const chevrons = document.querySelectorAll('#work-with-us .chevrons img')
 let prevChevrons = 0
 let currentChevrons = 0
 
-console.log(window.innerWidth)
 setInterval(() => {
   const chevronsLength = chevrons.length
   prevChevrons = currentChevrons
@@ -80,3 +81,12 @@ setInterval(() => {
   chevrons[prevChevrons].src = './image/ion_chevron-forward-outline(gray).svg'
   chevrons[currentChevrons].src = './image/ion_chevron-forward-outline(white).svg'
 }, 200)
+
+const buttonToForm = document.querySelectorAll('.button-to-form')
+const form = document.querySelector('#order-the-service .modal')
+
+buttonToForm.forEach(element => {
+  element.addEventListener('click', () => {
+    form.scrollIntoView({ behavior: "smooth", block: 'center' })
+  })
+})
