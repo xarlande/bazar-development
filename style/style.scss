@@ -30,12 +30,11 @@ header {
   left: 0;
   z-index: 1000;
   border-bottom: $toxic-color 1px solid;
+  backdrop-filter: blur(5.5px);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: rgba(25, 25, 25, 0.74);
 
   .header {
-    background: rgba(25, 25, 25, 0.74);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(5.5px);
-
     padding: 23px 40px;
     display: flex;
     justify-content: space-between;
@@ -257,7 +256,15 @@ header {
   }
 
   &.open-burger {
+    backdrop-filter: unset;
+    box-shadow: unset;
+    background: unset;
+
     .header {
+      backdrop-filter: blur(5.5px);
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      background: rgba(25, 25, 25, 0.74);
+
       .burger-btn {
         .icon-close {
           display: none;
@@ -297,6 +304,7 @@ header {
     top: 100%;
     left: 0;
     right: 0;
+    border-bottom: $toxic-color 1px solid;
 
     .container {
       padding: {
@@ -570,97 +578,99 @@ section[no-style] {
     overflow: scroll;
   }
 
-  .block-cards {
-    .block-card {
-      background-color: $bg-light-gray;
-      border-radius: 56px;
-      padding: 56px 48px;
-      margin: 32px 0;
-      border: 1px solid rgba(255, 0, 0, 0);
+  #swiper-services {
+    .block-cards {
+      .block-card {
+        background-color: $bg-light-gray;
+        border-radius: 56px;
+        padding: 56px 48px;
+        margin: 32px 0;
+        border: 1px solid rgba(255, 0, 0, 0);
 
-      .title-block {
-        color: $toxic-color;
-        font-family: Open Sans;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        padding-bottom: 24px;
-      }
-
-      .main-block {
-        padding: 24px 0;
-        border: {
-          top: $border-darkness-gray 1px solid;
-          bottom: $border-darkness-gray 1px solid;
+        .title-block {
+          color: $toxic-color;
+          font-family: Open Sans;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          padding-bottom: 24px;
         }
 
-        .item {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-
-          .name {
-            color: $text-light-gray;
-            font-family: Open Sans;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            white-space: nowrap;
+        .main-block {
+          padding: 24px 0;
+          border: {
+            top: $border-darkness-gray 1px solid;
+            bottom: $border-darkness-gray 1px solid;
           }
 
-          .value {
-            color: $toxic-color;
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .name {
+              color: $text-light-gray;
+              font-family: Open Sans;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              white-space: nowrap;
+            }
+
+            .value {
+              color: $toxic-color;
+              font-family: Open Sans;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+            }
+          }
+
+          .item:not(:last-child) {
+            margin-bottom: 16px;
+          }
+        }
+
+        .footer-block {
+          padding-top: 24px;
+
+          .footer-text {
             font-family: Open Sans;
             font-size: 20px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: 400;
             line-height: normal;
+            color: $text-light-gray;
           }
-        }
 
-        .item:not(:last-child) {
-          margin-bottom: 16px;
-        }
-      }
-
-      .footer-block {
-        padding-top: 24px;
-
-        .footer-text {
-          font-family: Open Sans;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          color: $text-light-gray;
-        }
-
-        .button {
-          margin-top: 24px;
-          width: 100%;
-
-          &:after {
-            content: url('../image/common/arrow-up-right-green.svg');
-            width: 24px;
-            height: 24px;
-          }
-        }
-      }
-
-      &:hover {
-        border: 1px solid #D8F520;
-        box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
-
-        .footer-block {
           .button {
-            @extend .button-active;
+            margin-top: 24px;
+            width: 100%;
 
             &:after {
-              content: url('../image/common/arrow-up-right.svg');
+              content: url('../image/common/arrow-up-right-green.svg');
               width: 24px;
               height: 24px;
+            }
+          }
+        }
+
+        &:hover {
+          border: 1px solid #D8F520;
+          box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
+
+          .footer-block {
+            .button {
+              @extend .button-active;
+
+              &:after {
+                content: url('../image/common/arrow-up-right.svg');
+                width: 24px;
+                height: 24px;
+              }
             }
           }
         }
