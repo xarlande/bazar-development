@@ -137,7 +137,27 @@ menuDropdownList.forEach((menuDropdown) => {
     const target = event.target;
     const menu = target.closest('.menu-dropdown');
     if (target.closest('.dropdown-title')) {
-      console.log('dropdown');
+      menu.classList.toggle('open');
+    }
+  });
+});
+
+const menuChildDropdownList = document.querySelectorAll('.menu-child-dropdown');
+
+menuChildDropdownList.forEach((menuChildDropdown) => {
+  menuChildDropdown.addEventListener('click', (event) => {
+    const target = event.target;
+    const menu = target.closest('.menu-child-dropdown');
+
+    menuChildDropdownList.forEach((element) => {
+      console.log('sdfsdf');
+      if (element !== menuChildDropdown) {
+        element.classList.remove('open');
+      }
+    });
+
+    if (target.closest('.menu-child-title')) {
+      menu.classList.toggle('open');
     }
   });
 });
