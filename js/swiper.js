@@ -268,7 +268,6 @@ const servicesSwiperBody = document.querySelector('#swiper-services .swiper-wrap
 const servicesSwiper = new Swiper('#swiper-services', {
   slidesPerView: 1,
   loop: true,
-  spaceBetween: 40,
   breakpoints: {
     [laptopWidth]: {
       slidesPerView: 2,
@@ -371,7 +370,6 @@ const ourProjectSwiperBody = document.querySelector('#swiper-our-project .swiper
 const ourProjectsSwiper = new Swiper('#swiper-our-project', {
   slidesPerView: 1,
   loop: true,
-  spaceBetween: 16,
   breakpoints: {
     [tabletWidth]: {
       slidesPerView: 2,
