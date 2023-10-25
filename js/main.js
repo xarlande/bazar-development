@@ -9,12 +9,12 @@ buttonToBazar.forEach((item) =>
   }),
 );
 
-const buttonToScrollEnd = document.querySelector('#button-scroll-to-end');
+const buttonToScrollFirstSection = document.querySelector('#button-scroll-to-first-section');
 
-if (buttonToScrollEnd) {
+if (buttonToScrollFirstSection) {
   const firstSection = document.querySelector('section');
 
-  buttonToScrollEnd.addEventListener('click', () => {
+  buttonToScrollFirstSection.addEventListener('click', () => {
     firstSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 }

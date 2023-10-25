@@ -183,10 +183,18 @@ header {
       margin-top: 94px;
       background: $bg-gray;
 
+      @include tablet() {
+        display: flex;
+      }
+      @include mobile() {
+        display: block;
+      }
+
       .menu-content {
         margin-left: 32px;
         display: flex;
         flex-direction: column;
+        flex: 2;
 
         .menu-link {
           font-family: Open Sans;
@@ -229,6 +237,7 @@ header {
             width: 200px;
             gap: 5px;
             margin-top: 18px;
+            flex: 1;
 
             .menu-child-dropdown {
               padding: 16px;
@@ -322,13 +331,8 @@ header {
         .button {
           display: flex;
           align-items: center;
-        }
-
-        @include mobile() {
-          .button {
-            height: 48px;
-            padding: 8px 16px;
-          }
+          height: 48px;
+          padding: 8px 16px;
         }
       }
     }
@@ -559,24 +563,25 @@ header {
   padding: 72px 40px;
 
   .buttons-block {
+    margin-top: 24px;
     display: flex;
     justify-content: center;
     flex-direction: row;
     gap: 10px;
     overflow: scroll;
+
+    @include mobile() {
+      margin-top: 32px;
+    }
   }
 
   #swiper-services {
     .block-cards {
       .block-card {
-        @include mobile() {
-          margin: 32px 25px;
-        }
-
         background-color: $bg-light-gray;
         border-radius: 56px;
         padding: 56px 48px;
-        margin: 32px 0;
+        margin: 25px;
         border: 1px solid rgba(255, 0, 0, 0);
 
         .title-block {
@@ -679,6 +684,9 @@ header {
     @include mobile() {
       justify-content: space-between;
     }
+    @include tablet() {
+      margin-top: unset;
+    }
   }
 }
 
@@ -738,6 +746,8 @@ header {
         .button-to-form {
           padding: 15px;
         }
+
+        padding-bottom: 32px;
       }
     }
 
@@ -751,7 +761,6 @@ header {
       height: 100%;
 
       @include tablet() {
-        margin-top: 32px;
         position: static;
       }
     }
@@ -1062,6 +1071,8 @@ header {
   #swiper-our-project {
     .swiper-slide {
       .project-block {
+        margin: 25px;
+        border: 1px;
         display: flex;
         align-items: end;
         padding: 30px 24px;
@@ -1097,6 +1108,7 @@ header {
 
             .button {
               padding: 16px;
+              cursor: auto;
             }
           }
 
@@ -1124,10 +1136,6 @@ header {
                 &:before {
                   content: url("./../image/common/arrow-up-right-40px.svg");
                 }
-
-                &:hover {
-                  background: $toxic-color;
-                }
               }
             }
 
@@ -1141,6 +1149,17 @@ header {
           left: 0;
           bottom: 0;
           background: linear-gradient(0deg, #191919 30.2%, rgba(25, 25, 25, 0.60) 62.59%, rgba(25, 25, 25, 0.00) 99.91%);
+        }
+
+        &:hover {
+          border: 1px solid #D8F520;
+          box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
+
+          .our-project-block {
+            .description-block > .button-block > .button {
+              background: $toxic-color;
+            }
+          }
         }
       }
     }

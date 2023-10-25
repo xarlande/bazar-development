@@ -312,10 +312,21 @@ header .menu .menu-wrapper {
   margin-top: 94px;
   background: #1F1F20;
 }
+@media screen and (max-width: 768px) {
+  header .menu .menu-wrapper {
+    display: flex;
+  }
+}
+@media screen and (max-width: 430px) {
+  header .menu .menu-wrapper {
+    display: block;
+  }
+}
 header .menu .menu-wrapper .menu-content {
   margin-left: 32px;
   display: flex;
   flex-direction: column;
+  flex: 2;
 }
 header .menu .menu-wrapper .menu-content .menu-link {
   font-family: Open Sans;
@@ -354,6 +365,7 @@ header .menu .menu-wrapper .menu-content .menu-dropdown .dropdown-content {
   width: 200px;
   gap: 5px;
   margin-top: 18px;
+  flex: 1;
 }
 header .menu .menu-wrapper .menu-content .menu-dropdown .dropdown-content .menu-child-dropdown {
   padding: 16px;
@@ -422,12 +434,8 @@ header .menu .menu-wrapper .menu-buttons {
 header .menu .menu-wrapper .menu-buttons .button {
   display: flex;
   align-items: center;
-}
-@media screen and (max-width: 430px) {
-  header .menu .menu-wrapper .menu-buttons .button {
-    height: 48px;
-    padding: 8px 16px;
-  }
+  height: 48px;
+  padding: 8px 16px;
 }
 header.open-burger {
   backdrop-filter: unset;
@@ -611,23 +619,24 @@ header[open-services] .open-header-services {
   padding: 72px 40px;
 }
 #services .buttons-block {
+  margin-top: 24px;
   display: flex;
   justify-content: center;
   flex-direction: row;
   gap: 10px;
   overflow: scroll;
 }
+@media screen and (max-width: 430px) {
+  #services .buttons-block {
+    margin-top: 32px;
+  }
+}
 #services #swiper-services .block-cards .block-card {
   background-color: #363638;
   border-radius: 56px;
   padding: 56px 48px;
-  margin: 32px 0;
+  margin: 25px;
   border: 1px solid rgba(255, 0, 0, 0);
-}
-@media screen and (max-width: 430px) {
-  #services #swiper-services .block-cards .block-card {
-    margin: 32px 25px;
-  }
 }
 #services #swiper-services .block-cards .block-card .title-block {
   color: #d8f520;
@@ -708,6 +717,11 @@ header[open-services] .open-header-services {
     justify-content: space-between;
   }
 }
+@media screen and (max-width: 768px) {
+  #services .navigation-block {
+    margin-top: unset;
+  }
+}
 
 .h3-title, .h2-title {
   font-family: Open Sans;
@@ -742,6 +756,7 @@ header[open-services] .open-header-services {
 #about .container .about .content {
   padding-top: 71px;
   width: 50%;
+  padding-bottom: 32px;
 }
 @media screen and (max-width: 768px) {
   #about .container .about .content {
@@ -771,7 +786,6 @@ header[open-services] .open-header-services {
 }
 @media screen and (max-width: 768px) {
   #about .container .unsplash-image {
-    margin-top: 32px;
     position: static;
   }
 }
@@ -1043,6 +1057,8 @@ header[open-services] .open-header-services {
   padding: 16px;
 }
 #our-projects #swiper-our-project .swiper-slide .project-block {
+  margin: 25px;
+  border: 1px;
   display: flex;
   align-items: end;
   padding: 30px 24px;
@@ -1076,6 +1092,7 @@ header[open-services] .open-header-services {
 }
 #our-projects #swiper-our-project .swiper-slide .project-block .our-project-block .link-block .button {
   padding: 16px;
+  cursor: auto;
 }
 #our-projects #swiper-our-project .swiper-slide .project-block .our-project-block .description-block {
   display: flex;
@@ -1100,9 +1117,6 @@ header[open-services] .open-header-services {
 #our-projects #swiper-our-project .swiper-slide .project-block .our-project-block .description-block .button-block .button:before {
   content: url("./../image/common/arrow-up-right-40px.svg");
 }
-#our-projects #swiper-our-project .swiper-slide .project-block .our-project-block .description-block .button-block .button:hover {
-  background: #d8f520;
-}
 #our-projects #swiper-our-project .swiper-slide .project-block .shadow {
   position: absolute;
   top: 50%;
@@ -1110,6 +1124,13 @@ header[open-services] .open-header-services {
   left: 0;
   bottom: 0;
   background: linear-gradient(0deg, #191919 30.2%, rgba(25, 25, 25, 0.6) 62.59%, rgba(25, 25, 25, 0) 99.91%);
+}
+#our-projects #swiper-our-project .swiper-slide .project-block:hover {
+  border: 1px solid #D8F520;
+  box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
+}
+#our-projects #swiper-our-project .swiper-slide .project-block:hover .our-project-block .description-block > .button-block > .button {
+  background: #d8f520;
 }
 #our-projects .navigation-block {
   margin-top: 24px;
