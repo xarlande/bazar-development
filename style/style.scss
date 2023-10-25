@@ -27,6 +27,7 @@ main {
     border-radius: 32px;
     background: rgba(34, 34, 35, 0.44);
     backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
     padding: 115.415px 68.737px 79.116px 96px;
 
     @include tablet() {
@@ -110,6 +111,7 @@ header {
   z-index: 1000;
   border-bottom: $toxic-color 1px solid;
   backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: rgba(25, 25, 25, 0.74);
 
@@ -336,11 +338,13 @@ header {
 
   &.open-burger {
     backdrop-filter: unset;
+    -webkit-backdrop-filter: unset;
     box-shadow: unset;
     background: unset;
 
     .header {
       backdrop-filter: blur(5.5px);
+      -webkit-backdrop-filter: blur(5.5px);
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
       background: rgba(25, 25, 25, 0.74);
 
@@ -1355,6 +1359,7 @@ header {
     border-radius: 32px;
     background: rgba(34, 34, 35, 0.44);
     backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
     padding: 90px 105px;
 
     @include tablet() {
