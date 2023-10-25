@@ -1050,6 +1050,11 @@ header[open-services] .open-header-services {
   flex-direction: row;
   overflow: scroll;
 }
+@media screen and (max-width: 430px) {
+  #our-projects .buttons-block {
+    justify-content: unset;
+  }
+}
 #our-projects .buttons-block .button {
   height: 36px;
   padding: 16px;
@@ -1565,12 +1570,28 @@ footer .footer-end-block .container .text-block {
   color: #8B8B8B;
   height: 27px;
 }
+@media screen and (max-width: 430px) {
+  footer .footer-end-block .container .text-block {
+    flex-direction: column;
+  }
+}
 footer .footer-end-block .container .text-block .first-text {
   padding-right: 40px;
   border-right: #484848 1px solid;
 }
+@media screen and (max-width: 430px) {
+  footer .footer-end-block .container .text-block .first-text {
+    padding-right: unset;
+    border-right: unset;
+  }
+}
 footer .footer-end-block .container .text-block .last-text {
   padding-left: 30px;
+}
+@media screen and (max-width: 430px) {
+  footer .footer-end-block .container .text-block .last-text {
+    padding-left: unset;
+  }
 }
 footer .footer-end-block .container .text-block .first-text, footer .footer-end-block .container .text-block .last-text {
   display: flex;

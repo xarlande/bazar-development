@@ -1060,6 +1060,10 @@ header {
     flex-direction: row;
     overflow: scroll;
 
+    @include mobile() {
+      justify-content: unset;
+    }
+
     .button {
       height: 36px;
       padding: 16px;
@@ -1692,13 +1696,26 @@ footer {
         color: $text-gray;
         height: 27px;
 
+        @include mobile() {
+          flex-direction: column;
+        }
+
         .first-text {
           padding-right: 40px;
           border-right: $border-darkness-gray 1px solid;
+
+          @include mobile() {
+            padding-right: unset;
+            border-right: unset;
+          }
         }
 
         .last-text {
           padding-left: 30px;
+
+          @include mobile() {
+            padding-left: unset;
+          }
         }
 
         .first-text, .last-text {
