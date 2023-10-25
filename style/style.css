@@ -607,11 +607,9 @@ header[open-services] .open-header-services {
 #particles-js {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: 50% 50%;
   position: absolute;
   top: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 #services {
@@ -1301,7 +1299,7 @@ header[open-services] .open-header-services {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
 }
 #order-the-service .modal {
   border-radius: 32px;
