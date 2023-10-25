@@ -22,6 +22,85 @@ main {
   padding-top: 120px;
   position: relative;
   padding-bottom: 105px;
+
+  .hero {
+    border-radius: 32px;
+    background: rgba(34, 34, 35, 0.44);
+    backdrop-filter: blur(6.5px);
+    padding: 115.415px 68.737px 79.116px 96px;
+
+    @include tablet() {
+      padding: 48px 40px 28px 48px;
+    }
+    @include mobile() {
+      padding: 40px 24px;
+    }
+
+    .content {
+      max-width: 981px;
+
+      .title {
+        font-family: DM Sans;
+        font-size: 88px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @include mobile() {
+          font-size: 40px;
+        }
+      }
+
+      .description {
+        color: #b7b7b7;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        max-width: 705px;
+      }
+    }
+
+    .buttons-block {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 56px;
+
+      @include mobile() {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .button-to-form {
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  @include tablet() {
+    padding-top: 43px;
+  }
+  @include mobile() {
+    padding-top: 84px;
+  }
+}
+
+section {
+  padding: 72px 40px;
+
+  @include tablet() {
+    padding: 56px 16px !important;
+  }
+  @include mobile() {
+    padding: 24px 0 !important;
+  }
+
+  &[no-style] {
+    padding: 0;
+  }
 }
 
 header {
@@ -403,26 +482,6 @@ header {
   }
 }
 
-section {
-  padding: 72px 40px;
-}
-
-@include tablet() {
-  section {
-    padding: 56px 16px !important;
-  }
-}
-
-@include mobile() {
-  section {
-    padding: 24px 16px !important;
-  }
-}
-
-section[no-style] {
-  padding: 0;
-}
-
 .container {
   margin: 0 auto;
   max-width: 1330px;
@@ -459,6 +518,10 @@ section[no-style] {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &[border] {
+    border: $toxic-color 1px solid;
+  }
 }
 
 .button-active {
@@ -481,10 +544,6 @@ section[no-style] {
   }
 }
 
-.button-rounded[border] {
-  border: $toxic-color 1px solid;
-}
-
 #particles-js {
   width: 100%;
   height: 100%;
@@ -493,77 +552,6 @@ section[no-style] {
   position: absolute;
   top: 0;
   z-index: 0;
-}
-
-.hero {
-  border-radius: 32px;
-  background: rgba(34, 34, 35, 0.44);
-  backdrop-filter: blur(6.5px);
-  padding: 115.415px 68.737px 79.116px 96px;
-
-  .content {
-    max-width: 981px;
-
-    .title {
-      font-family: DM Sans;
-      font-size: 88px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      text-transform: uppercase;
-    }
-
-    .description {
-      color: #b7b7b7;
-      font-family: Open Sans;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      max-width: 705px;
-    }
-  }
-
-  .buttons-block {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 56px;
-  }
-}
-
-@include tablet() {
-  main {
-    padding-top: 43px;
-  }
-
-  .hero {
-    padding: 48px 40px 28px 48px;
-  }
-}
-
-@include mobile() {
-  main {
-    padding-top: 84px;
-  }
-
-  .hero {
-    padding: 40px 24px;
-
-    .content {
-      .title {
-        font-size: 40px;
-      }
-    }
-  }
-  .buttons-block {
-    display: inline-flex;
-    flex-direction: column;
-    gap: 15px;
-
-    .button-to-form {
-      padding: 15px;
-    }
-  }
 }
 
 #services {
@@ -581,6 +569,10 @@ section[no-style] {
   #swiper-services {
     .block-cards {
       .block-card {
+        @include mobile() {
+          margin: 32px 25px;
+        }
+
         background-color: $bg-light-gray;
         border-radius: 56px;
         padding: 56px 48px;
@@ -727,8 +719,11 @@ section[no-style] {
     .about {
       .content {
         padding-top: 71px;
-
         width: 50%;
+
+        @include tablet() {
+          width: 100%;
+        }
 
         .description {
           color: #ccc;
@@ -754,6 +749,11 @@ section[no-style] {
       left: 55%;
       width: 100%;
       height: 100%;
+
+      @include tablet() {
+        margin-top: 32px;
+        position: static;
+      }
     }
   }
 
@@ -776,29 +776,13 @@ section[no-style] {
       display: inline-block;
       padding-left: 100%;
       animation: marquee 10s linear infinite;
-    }
-  }
 
-  @include tablet() {
-    .container {
-      .about {
-        .content {
-          width: 100%;
-        }
+      @include tablet() {
+        font-size: 128px;
       }
-
-      .unsplash-image {
-        margin-top: 32px;
-        position: static;
+      @include mobile() {
+        font-size: 96px;
       }
-    }
-    .moving-tape p {
-      font-size: 128px;
-    }
-  }
-  @include mobile() {
-    .moving-tape p {
-      font-size: 96px;
     }
   }
 }
@@ -846,19 +830,15 @@ section[no-style] {
       }
     }
 
+    @include tablet() {
+      flex-direction: column;
+    }
+
     .item:nth-child(2) {
       .item-content {
         flex-direction: column-reverse;
-      }
-    }
-  }
 
-  @include tablet() {
-    .content-block {
-      flex-direction: column;
-
-      .item:nth-child(2) {
-        .item-content {
+        @include tablet() {
           flex-direction: column;
         }
       }
@@ -869,6 +849,11 @@ section[no-style] {
 #stage-of-cooperation {
   .header-block {
     display: flex;
+
+    @include tablet() {
+      flex-direction: column;
+      gap: 24px;
+    }
 
     .h2-title {
       flex: 2;
@@ -888,11 +873,24 @@ section[no-style] {
   .content {
     display: flex;
 
+    @include tablet() {
+      flex-direction: column;
+      margin-top: 32px;
+    }
+
     .item {
       flex: 1;
 
+      @include tablet() {
+        border: unset;
+      }
+
       .content-block {
         margin-bottom: 28px;
+
+        @include tablet() {
+          margin-top: 0 !important;
+        }
 
         .title {
           margin-left: 8px;
@@ -935,25 +933,6 @@ section[no-style] {
 
     .item {
       border-left: $border-gray 1px solid;
-    }
-  }
-
-  @include tablet() {
-    .header-block {
-      flex-direction: column;
-      gap: 24px;
-    }
-    .content {
-      flex-direction: column;
-      margin-top: 32px;
-
-      .item {
-        border: unset;
-
-        .content-block {
-          margin-top: 0 !important;
-        }
-      }
     }
   }
 }
@@ -1051,14 +1030,11 @@ section[no-style] {
 
       .button-block {
         justify-content: start;
-      }
-    }
-  }
-  @include mobile() {
-    .container {
-      .button-block {
-        button {
-          flex: 1;
+
+        @include mobile() {
+          button {
+            flex: 1;
+          }
         }
       }
     }
@@ -1546,13 +1522,32 @@ footer {
       display: flex;
       justify-content: space-between;
 
+      @include tablet() {
+        flex-wrap: wrap;
+      }
+
       .about-block {
         max-width: 310px;
+
+        @include tablet() {
+          width: 100%;
+          max-width: unset;
+          margin-bottom: 48px;
+          display: flex;
+          gap: 24px;
+        }
+        @include mobile() {
+          flex-direction: column;
+        }
 
         .about {
           .title {
             margin-top: 57px;
             margin-bottom: 17px;
+
+            @include tablet() {
+              margin: 0;
+            }
           }
 
           .content {
@@ -1570,6 +1565,14 @@ footer {
         width: 100%;
         display: flex;
         gap: 15px;
+
+        @include tablet() {
+          width: 50%;
+        }
+        @include mobile() {
+          width: 100%;
+          margin-bottom: 40px;
+        }
 
         .sitemap-block, .services-block {
           flex: 1;
@@ -1618,6 +1621,13 @@ footer {
         max-width: 336px;
         width: 100%;
 
+        @include tablet() {
+          width: 50%;
+        }
+        @include mobile() {
+          width: 100%;
+        }
+
         .contact-item {
           margin: 24px 0;
 
@@ -1640,46 +1650,10 @@ footer {
           }
         }
 
-        button {
+        .button-to-form {
           padding: 16px;
-        }
-      }
 
-      @include tablet() {
-        flex-wrap: wrap;
-
-        .about-block {
-          width: 100%;
-          max-width: unset;
-          margin-bottom: 48px;
-          display: flex;
-          gap: 24px;
-
-          .about {
-            .title {
-              margin: 0;
-            }
-          }
-        }
-        .navigation-block {
-          width: 50%;
-        }
-        .contacts-block {
-          width: 50%;
-        }
-      }
-      @include mobile() {
-        .about-block {
-          flex-direction: column;
-        }
-        .navigation-block {
-          width: 100%;
-          margin-bottom: 40px;
-        }
-        .contacts-block {
-          width: 100%;
-
-          .button-to-form {
+          @include mobile() {
             width: 100%;
           }
         }
