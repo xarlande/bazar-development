@@ -939,7 +939,7 @@ header {
         }
         border-left: unset;
       }
-      @include mobile(){
+      @include mobile() {
         width: unset;
         &:nth-child(even) {
           margin-left: unset;
@@ -1537,15 +1537,16 @@ header {
           margin-top: 2px;
           cursor: default;
           background-color: $bg-no-light-gray;
+          overflow-x: hidden;
 
           .dropdown {
-            margin: 16px 32px;
+            margin: 0;
 
             .dropdown-item {
               cursor: pointer;
               padding-bottom: 16px;
               padding-top: 16px;
-              padding-left: 5px;
+              padding-left: 32px;
 
               &:hover {
                 background: $toxic-color;
