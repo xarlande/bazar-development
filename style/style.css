@@ -939,10 +939,23 @@ header[open-services] .open-header-services {
 }
 #stage-of-cooperation .content .item {
   flex: 1;
+  border-left: #555555 1px solid;
 }
 @media screen and (max-width: 768px) {
   #stage-of-cooperation .content .item {
-    border: unset;
+    width: 50%;
+    border-left: unset;
+  }
+  #stage-of-cooperation .content .item:nth-child(even) {
+    margin-left: 50%;
+  }
+}
+@media screen and (max-width: 430px) {
+  #stage-of-cooperation .content .item {
+    width: unset;
+  }
+  #stage-of-cooperation .content .item:nth-child(even) {
+    margin-left: unset;
   }
 }
 #stage-of-cooperation .content .item .content-block {
@@ -985,9 +998,6 @@ header[open-services] .open-header-services {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-#stage-of-cooperation .content .item {
-  border-left: #555555 1px solid;
 }
 
 #work-with-us {

@@ -930,9 +930,20 @@ header {
 
     .item {
       flex: 1;
+      border-left: $border-gray 1px solid;
 
       @include tablet() {
-        border: unset;
+        width: 50%;
+        &:nth-child(even) {
+          margin-left: 50%;
+        }
+        border-left: unset;
+      }
+      @include mobile(){
+        width: unset;
+        &:nth-child(even) {
+          margin-left: unset;
+        }
       }
 
       .content-block {
@@ -979,10 +990,6 @@ header {
           }
         }
       }
-    }
-
-    .item {
-      border-left: $border-gray 1px solid;
     }
   }
 }
