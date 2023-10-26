@@ -182,6 +182,11 @@ main .hero .content .title {
   line-height: normal;
   text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+  main .hero .content .title {
+    font-size: 64px;
+  }
+}
 @media screen and (max-width: 430px) {
   main .hero .content .title {
     font-size: 40px;
@@ -200,25 +205,19 @@ main .hero .buttons-block {
   display: flex;
   justify-content: space-between;
   margin-top: 56px;
+  width: 100%;
 }
 @media screen and (max-width: 430px) {
   main .hero .buttons-block {
     display: inline-flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
+    margin-top: 48px;
   }
   main .hero .buttons-block .button-to-form {
     padding: 15px;
-  }
-}
-@media screen and (max-width: 768px) {
-  main {
-    padding-top: 43px;
-  }
-}
-@media screen and (max-width: 430px) {
-  main {
-    padding-top: 84px;
+    width: 100%;
   }
 }
 
@@ -255,11 +254,21 @@ header .header {
   justify-content: space-between;
   justify-items: center;
 }
+@media screen and (max-width: 768px) {
+  header .header {
+    justify-content: space-between;
+  }
+}
 header .header .nav-block {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  header .header .nav-block {
+    display: none;
+  }
 }
 header .header .nav-block nav {
   border-radius: 50px;
@@ -284,11 +293,32 @@ header .header .nav-block .buttons-block {
   display: flex;
   gap: 8px;
 }
-header .header .burger-btn {
+header .header .button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header .header .button-wrapper .btn-call {
+  display: none;
+  padding: 8px;
+  border-radius: 100%;
+  border: 1px solid #d8f520;
+}
+@media screen and (max-width: 768px) {
+  header .header .button-wrapper .btn-call {
+    display: block;
+  }
+}
+header .header .button-wrapper .burger-btn {
   display: none;
   cursor: pointer;
 }
-header .header .burger-btn .icon-open {
+@media screen and (max-width: 768px) {
+  header .header .button-wrapper .burger-btn {
+    display: block;
+  }
+}
+header .header .button-wrapper .burger-btn .icon-open {
   display: none;
 }
 @media screen and (max-width: 768px) {
@@ -451,25 +481,14 @@ header.open-burger .header {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: rgba(25, 25, 25, 0.74);
 }
-header.open-burger .header .burger-btn .icon-close {
+header.open-burger .header .button-wrapper .burger-btn .icon-close {
   display: none;
 }
-header.open-burger .header .burger-btn .icon-open {
+header.open-burger .header .button-wrapper .burger-btn .icon-open {
   display: block;
 }
 header.open-burger .menu {
   display: block;
-}
-@media screen and (max-width: 768px) {
-  header .header {
-    justify-content: space-between;
-  }
-  header .header .nav-block {
-    display: none;
-  }
-  header .header .burger-btn {
-    display: block;
-  }
 }
 header .services-header {
   display: none;
@@ -608,6 +627,30 @@ header[open-services] .open-header-services {
   display: block;
 }
 
+.h3-title, .h2-title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.h2-title {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.h3-title {
+  font-size: 16px;
+}
+
+.text-toxic {
+  color: #d8f520;
+}
+
+.text-gray {
+  color: #8B8B8B;
+}
+
 #particles-js {
   width: 100%;
   height: 100%;
@@ -731,30 +774,6 @@ header[open-services] .open-header-services {
   #services .navigation-block {
     margin-top: unset;
   }
-}
-
-.h3-title, .h2-title {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.h2-title {
-  font-size: 40px;
-  text-transform: uppercase;
-}
-
-.h3-title {
-  font-size: 16px;
-}
-
-.text-toxic {
-  color: #d8f520;
-}
-
-.text-gray {
-  color: #8B8B8B;
 }
 
 #about {
