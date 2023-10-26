@@ -89,17 +89,17 @@ main {
 }
 
 section {
-  padding: 72px 40px;
+  padding: 72px 0;
 
   @include tablet() {
-    padding: 56px 16px !important;
+    padding: 56px 0 !important;
   }
   @include mobile() {
     padding: 24px 0 !important;
   }
 
   &[no-style] {
-    padding: 0;
+    padding: 0 !important;
   }
 }
 
@@ -486,10 +486,18 @@ header {
   }
 }
 
-.container {
+%container {
   margin: 0 auto;
   max-width: 1330px;
   padding: 0 15px;
+}
+
+.container {
+  @extend %container;
+}
+
+.container-inner {
+  @extend %container;
 }
 
 .button {
@@ -729,6 +737,11 @@ header {
 
         @include tablet() {
           width: 100%;
+          padding-top: 32px;
+        }
+
+        .h2-title {
+          margin-bottom: 15px;
         }
 
         .description {
@@ -739,10 +752,18 @@ header {
           font-weight: 400;
           line-height: normal;
           margin-bottom: 48px;
+
+          @include mobile() {
+            margin-bottom: 32px;
+          }
         }
 
         .button-to-form {
           padding: 15px;
+
+          @include mobile() {
+            width: 100%;
+          }
         }
 
         padding-bottom: 32px;
@@ -759,8 +780,18 @@ header {
       height: 100%;
 
       @include tablet() {
-        position: static;
+        display: none;
       }
+    }
+  }
+
+  .unsplash-image-out {
+    display: none;
+    width: 100%;
+    margin-bottom: 16px;
+
+    @include tablet() {
+      display: block;
     }
   }
 
@@ -768,6 +799,10 @@ header {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
+
+    @include tablet() {
+      margin-bottom: 16px;
+    }
 
     p {
       font-family: DM Sans;
@@ -1053,7 +1088,7 @@ header {
 
   .buttons-block {
     margin-top: 32px;
-    margin-bottom: 24px;
+    padding-bottom: 12px;
     display: flex;
     gap: 16px;
     justify-content: center;
@@ -1067,99 +1102,115 @@ header {
     .button {
       height: 36px;
       padding: 16px;
+      white-space: nowrap;
     }
   }
 
-  #swiper-our-project {
-    .swiper-slide {
-      .project-block {
-        margin: 25px;
-        border: 1px;
-        display: flex;
-        align-items: end;
-        padding: 30px 24px;
-        height: 546px;
-        position: relative;
+  .container-inner {
+    @include tablet() {
+      padding: 0;
+    }
 
-        img {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          width: 100%;
-          height: 100%;
-        }
+    #swiper-our-project {
+      .swiper-slide {
+        .project-block {
+          margin: 25px;
+          border: 1px transparent solid;
+          display: flex;
+          align-items: end;
+          padding: 30px 24px;
+          height: 546px;
+          position: relative;
 
-        .our-project-block {
-          z-index: 10;
-
-          .title {
-            font-family: DM Sans;
-            font-size: 28px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            text-transform: uppercase;
+          @include tablet() {
+            margin: 0;
           }
 
-          .link-block {
-            margin: 16px 0;
-            display: flex;
-            gap: 16px;
-
-            .button {
-              padding: 16px;
-              cursor: auto;
-            }
+          img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
           }
 
-          .description-block {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+          .our-project-block {
+            z-index: 10;
 
-            .description {
-              color: $text-no-white-color;
-              font-family: Open Sans;
-              font-size: 13px;
+            .title {
+              font-family: DM Sans;
+              font-size: 28px;
               font-style: normal;
-              font-weight: 400;
+              font-weight: 700;
               line-height: normal;
+              text-transform: uppercase;
             }
 
-            .button-block {
-              z-index: 10;
+            .link-block {
+              margin: 16px 0;
+              display: flex;
+              gap: 16px;
 
               .button {
-                margin-left: 5px;
-                background: $text-no-white-color;
-
-                &:before {
-                  content: url("./../image/common/arrow-up-right-40px.svg");
-                }
+                padding: 16px;
+                cursor: auto;
               }
             }
 
+            .description-block {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+
+              .description {
+                color: $text-no-white-color;
+                font-family: Open Sans;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+              }
+
+              .button-block {
+                z-index: 10;
+
+                .button {
+                  margin-left: 5px;
+                  background: $text-no-white-color;
+
+                  &:before {
+                    content: url("./../image/common/arrow-up-right-40px.svg");
+                  }
+                }
+              }
+
+            }
           }
-        }
 
-        .shadow {
-          position: absolute;
-          top: 50%;
-          right: 0;
-          left: 0;
-          bottom: 0;
-          background: linear-gradient(0deg, #191919 30.2%, rgba(25, 25, 25, 0.60) 62.59%, rgba(25, 25, 25, 0.00) 99.91%);
-        }
+          .shadow {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, #191919 30.2%, rgba(25, 25, 25, 0.60) 62.59%, rgba(25, 25, 25, 0.00) 99.91%);
+          }
 
-        &:hover {
-          border: 1px solid #D8F520;
-          box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
+          &:hover {
+            border: 1px solid #D8F520;
+            box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
 
-          .our-project-block {
-            .description-block > .button-block > .button {
-              background: $toxic-color;
+            @include tablet() {
+              border: 1px solid transparent;
+              box-shadow: unset;
+            }
+
+            .our-project-block {
+              .description-block > .button-block > .button {
+                background: $toxic-color;
+              }
             }
           }
         }
@@ -1250,6 +1301,8 @@ header {
   }
 
   @include tablet() {
+    padding-bottom: 0 !important;
+
     .faq-list {
       width: 100%;
     }
@@ -1258,6 +1311,7 @@ header {
       position: static;
       width: 100%;
       height: 375px;
+      border-radius: unset;
     }
   }
 }
@@ -1360,8 +1414,17 @@ header {
 
 #order-the-service {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 150px;
+  padding-top: 100px !important;
+  padding-bottom: 150px !important;
+
+  @include tablet() {
+    padding-top: 65px !important;
+    padding-bottom: 124px !important;
+  }
+  @include mobile() {
+    padding-top: 40px !important;
+    padding-bottom: 64px !important;
+  }
 
   #particles-js-duplicate {
     position: absolute;
@@ -1461,19 +1524,21 @@ header {
           background-color: $bg-no-light-gray;
 
           .dropdown {
-            margin: 32px;
+            margin: 16px 32px;
 
             .dropdown-item {
               cursor: pointer;
+              padding-bottom: 16px;
+              padding-top: 16px;
+              padding-left: 5px;
+
+              &:hover {
+                background: $toxic-color;
+                color: $text-black;
+              }
 
               &:not(:last-child) {
                 border-bottom: $border-darkness-gray 1px solid;
-                padding-bottom: 16px;
-              }
-            ;
-
-              &:not(:first-child) {
-                padding-top: 16px;
               }
             }
           }
