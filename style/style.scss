@@ -51,7 +51,7 @@ main {
       max-width: 981px;
 
       .title {
-        font-family: DM Sans;
+        font-family: DM Sans, serif;
         font-size: 88px;
         font-style: normal;
         font-weight: 700;
@@ -68,7 +68,9 @@ main {
 
       .description {
         color: #b7b7b7;
-        font-family: Open Sans;
+        font-family:
+          Open Sans,
+          serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -153,7 +155,7 @@ header {
 
         a,
         p {
-          font-family: Open Sans;
+          font-family: Open Sans, serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -238,7 +240,7 @@ header {
         flex: 2;
 
         .menu-link {
-          font-family: Open Sans;
+          font-family: Open Sans, serif;
           font-size: 24px;
           font-style: normal;
           font-weight: 400;
@@ -255,7 +257,7 @@ header {
           margin-top: 18px;
 
           .dropdown-title {
-            font-family: Open Sans;
+            font-family: Open Sans, serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 700;
@@ -287,7 +289,7 @@ header {
               border-radius: 100px;
 
               .menu-child-title {
-                font-family: Open Sans;
+                font-family: Open Sans, serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -308,8 +310,7 @@ header {
                 gap: 16px;
 
                 .menu-child-link {
-                  text-edge: cap;
-                  font-family: Open Sans;
+                  font-family: Open Sans, serif;
                   font-size: 20px;
                   font-style: normal;
                   font-weight: 400;
@@ -430,7 +431,7 @@ header {
         flex: 1;
 
         .section-header {
-          font-family: Open Sans;
+          font-family: Open Sans, serif;
           font-size: 32px;
           font-style: normal;
           font-weight: 600;
@@ -482,7 +483,7 @@ header {
           gap: 24px;
 
           a {
-            font-family: Open Sans;
+            font-family: Open Sans, serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -537,7 +538,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
@@ -586,7 +587,7 @@ header {
 }
 
 %title-font {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -626,9 +627,59 @@ header {
 
   .container {
     .head-block {
-    }
+      display: flex;
+      justify-content: space-between;
 
-    .h2-title {
+      @include tablet() {
+        display: block;
+        justify-content: unset;
+      }
+
+      .h2-title {
+      }
+      .description {
+        width: 50%;
+        font-family: Open Sans, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $text-gray;
+
+        @include tablet() {
+          margin-top: 24px;
+          width: unset;
+        }
+
+        a {
+          color: $toxic-color;
+          font-weight: 700;
+        }
+      }
+    }
+    .content {
+      margin-top: 40px;
+
+      @include tablet() {
+        margin-top: 24px;
+      }
+
+      .card {
+        background: $bg-dark;
+        border-radius: 16px;
+        padding: 24px;
+
+        .card-big-icon {
+        }
+        .card-body {
+          .card-title {
+            .card-icon {
+            }
+          }
+          .card-description {
+          }
+        }
+      }
     }
   }
 }
@@ -667,7 +718,7 @@ header {
 
         .title-block {
           color: $toxic-color;
-          font-family: Open Sans;
+          font-family: Open Sans, serif;
           font-size: 25px;
           font-style: normal;
           font-weight: 600;
@@ -697,7 +748,7 @@ header {
 
             .name {
               color: $text-light-gray;
-              font-family: Open Sans;
+              font-family: Open Sans, serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -707,7 +758,7 @@ header {
 
             .value {
               color: $toxic-color;
-              font-family: Open Sans;
+              font-family: Open Sans, serif;
               font-size: 20px;
               font-style: normal;
               font-weight: 600;
@@ -724,7 +775,7 @@ header {
           padding-top: 24px;
 
           .footer-text {
-            font-family: Open Sans;
+            font-family: Open Sans, serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -820,7 +871,7 @@ header {
       gap: 50px;
       margin-top: 40px;
 
-      font-family: Open Sans;
+      font-family: Open Sans, serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -962,7 +1013,7 @@ header {
 
       .button {
         padding: 16px;
-        font-family: Open Sans;
+        font-family: Open Sans, serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
@@ -1012,7 +1063,7 @@ footer {
           }
 
           .content {
-            font-family: Open Sans;
+            font-family: Open Sans, serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -1045,7 +1096,7 @@ footer {
 
           a {
             display: block;
-            font-family: Open Sans;
+            font-family: Open Sans, serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -1096,7 +1147,7 @@ footer {
 
           .name {
             color: $text-gray;
-            font-family: Open Sans;
+            font-family: Open Sans, serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -1105,7 +1156,7 @@ footer {
 
           .value {
             color: $text-no-white-color;
-            font-family: Open Sans;
+            font-family: Open Sans, serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;

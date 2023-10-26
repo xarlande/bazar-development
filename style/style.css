@@ -187,7 +187,7 @@ main .hero .content {
   max-width: 981px;
 }
 main .hero .content .title {
-  font-family: DM Sans;
+  font-family: DM Sans, serif;
   font-size: 88px;
   font-style: normal;
   font-weight: 700;
@@ -206,7 +206,7 @@ main .hero .content .title {
 }
 main .hero .content .description {
   color: #b7b7b7;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -291,7 +291,7 @@ header .header .nav-block nav {
 }
 header .header .nav-block nav a,
 header .header .nav-block nav p {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -373,7 +373,7 @@ header .menu .menu-wrapper .menu-content {
   flex: 2;
 }
 header .menu .menu-wrapper .menu-content .menu-link {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -388,7 +388,7 @@ header .menu .menu-wrapper .menu-content .menu-dropdown {
   margin-top: 18px;
 }
 header .menu .menu-wrapper .menu-content .menu-dropdown .dropdown-title {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -418,7 +418,7 @@ header .menu .menu-wrapper .menu-content .menu-dropdown .dropdown-content .menu-
   border-radius: 100px;
 }
 header .menu .menu-wrapper .menu-content .menu-dropdown .dropdown-content .menu-child-dropdown .menu-child-title {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -437,8 +437,7 @@ header .menu .menu-wrapper .menu-content .menu-dropdown .dropdown-content .menu-
   gap: 16px;
 }
 header .menu .menu-wrapper .menu-content .menu-dropdown .dropdown-content .menu-child-dropdown .menu-child-content .menu-child-link {
-  text-edge: cap;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -523,7 +522,7 @@ header .services-header .container .section-services {
   flex: 1;
 }
 header .services-header .container .section-services .section-header {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -565,7 +564,7 @@ header .services-header .container .section-services .content {
   gap: 24px;
 }
 header .services-header .container .section-services .content a {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -601,7 +600,7 @@ header[open-services] .open-header-services {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
@@ -644,7 +643,7 @@ header[open-services] .open-header-services {
 }
 
 .h3-title, .h2-title {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -678,6 +677,48 @@ header[open-services] .open-header-services {
 #our-value {
   background: #1f1f20;
 }
+#our-value .container .head-block {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  #our-value .container .head-block {
+    display: block;
+    justify-content: unset;
+  }
+}
+#our-value .container .head-block .description {
+  width: 50%;
+  font-family: Open Sans, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8b8b8b;
+}
+@media screen and (max-width: 768px) {
+  #our-value .container .head-block .description {
+    margin-top: 24px;
+    width: unset;
+  }
+}
+#our-value .container .head-block .description a {
+  color: #d8f520;
+  font-weight: 700;
+}
+#our-value .container .content {
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  #our-value .container .content {
+    margin-top: 24px;
+  }
+}
+#our-value .container .content .card {
+  background: #171717;
+  border-radius: 16px;
+  padding: 24px;
+}
 #technologies {
   background: #1f1f20;
   padding: 72px 40px;
@@ -704,7 +745,7 @@ header[open-services] .open-header-services {
 }
 #technologies #swiper-technologies .block-cards .block-card .title-block {
   color: #d8f520;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
@@ -731,7 +772,7 @@ header[open-services] .open-header-services {
 }
 #technologies #swiper-technologies .block-cards .block-card .main-block .item .name {
   color: #d8d8d8;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -740,7 +781,7 @@ header[open-services] .open-header-services {
 }
 #technologies #swiper-technologies .block-cards .block-card .main-block .item .value {
   color: #d8f520;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -753,7 +794,7 @@ header[open-services] .open-header-services {
   padding-top: 24px;
 }
 #technologies #swiper-technologies .block-cards .block-card .footer-block .footer-text {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -835,7 +876,7 @@ header[open-services] .open-header-services {
   display: flex;
   gap: 50px;
   margin-top: 40px;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -935,7 +976,7 @@ header[open-services] .open-header-services {
 }
 #order-the-service .modal .content .button {
   padding: 16px;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -985,7 +1026,7 @@ footer .footer-start-block .container .about-block .about .title {
   }
 }
 footer .footer-start-block .container .about-block .about .content {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1019,7 +1060,7 @@ footer .footer-start-block .container .navigation-block .services-block h3 {
 footer .footer-start-block .container .navigation-block .sitemap-block a,
 footer .footer-start-block .container .navigation-block .services-block a {
   display: block;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1067,7 +1108,7 @@ footer .footer-start-block .container .contacts-block .contact-item {
 }
 footer .footer-start-block .container .contacts-block .contact-item .name {
   color: #8b8b8b;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1075,7 +1116,7 @@ footer .footer-start-block .container .contacts-block .contact-item .name {
 }
 footer .footer-start-block .container .contacts-block .contact-item .value {
   color: #efefef;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
