@@ -26,7 +26,7 @@ reviewsButtonPrev.addEventListener('click', () => swiperReviews.slidePrev());
 const servicesItems = {
   seo: [
     {
-      title: 'Landing page',
+      title: 'Landing <br/> page',
       titleIcon: 'image/services/card.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -35,7 +35,7 @@ const servicesItems = {
       actionForButton: () => window.open('https://bazar.club', '_blank'),
     },
     {
-      title: 'Business card',
+      title: 'Business <br/> card',
       titleIcon: 'image/services/bag.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -44,7 +44,7 @@ const servicesItems = {
       actionForButton: () => window.open('https://bazar.club', '_blank'),
     },
     {
-      title: 'Corporate website',
+      title: 'Corporate <br/> website',
       titleIcon: 'image/services/high-rise.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -53,7 +53,7 @@ const servicesItems = {
       actionForButton: () => window.open('https://bazar.club', '_blank'),
     },
     {
-      title: 'Landing page',
+      title: 'Landing <br/> page',
       titleIcon: 'image/services/card.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -62,7 +62,7 @@ const servicesItems = {
       actionForButton: () => window.open('https://bazar.club', '_blank'),
     },
     {
-      title: 'Business card',
+      title: 'Business <br/> card',
       titleIcon: 'image/services/bag.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -71,7 +71,7 @@ const servicesItems = {
       actionForButton: () => window.open('https://bazar.club', '_blank'),
     },
     {
-      title: 'Corporate website',
+      title: 'Corporate <br/> website',
       titleIcon: 'image/services/high-rise.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -82,7 +82,7 @@ const servicesItems = {
   ],
   development: [
     {
-      title: 'Landing page',
+      title: 'Landing <br/> page',
       titleIcon: 'image/services/card.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -91,7 +91,7 @@ const servicesItems = {
       actionForButton: () => window.open('https://bazar.club', '_blank'),
     },
     {
-      title: 'Business card',
+      title: 'Business <br/> card',
       titleIcon: 'image/services/bag.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -100,7 +100,34 @@ const servicesItems = {
       actionForButton: () => window.open('https://bazar.club', '_blank'),
     },
     {
-      title: 'Corporate website',
+      title: 'Corporate <br/> website',
+      titleIcon: 'image/services/high-rise.svg',
+      budget: '$1000',
+      timeSpent: '14 days',
+      forWhom: 'business',
+      contentText: 'You will get complete information about each we offer. offer. offer. offer. offer.',
+      actionForButton: () => window.open('https://bazar.club', '_blank'),
+    },
+    {
+      title: 'Landing <br/> page',
+      titleIcon: 'image/services/card.svg',
+      budget: '$1000',
+      timeSpent: '14 days',
+      forWhom: 'business',
+      contentText: 'You will get complete information about each we offer. offer. offer. offer. offer.',
+      actionForButton: () => window.open('https://bazar.club', '_blank'),
+    },
+    {
+      title: 'Business <br/> card',
+      titleIcon: 'image/services/bag.svg',
+      budget: '$1000',
+      timeSpent: '14 days',
+      forWhom: 'business',
+      contentText: 'You will get complete information about each we offer. offer. offer. offer. offer.',
+      actionForButton: () => window.open('https://bazar.club', '_blank'),
+    },
+    {
+      title: 'Corporate <br/> website',
       titleIcon: 'image/services/high-rise.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -111,7 +138,7 @@ const servicesItems = {
   ],
   marketing: [
     {
-      title: 'Landing page',
+      title: 'Landing <br/> page',
       titleIcon: 'image/services/card.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -120,7 +147,7 @@ const servicesItems = {
       actionForButton: () => window.open('https://bazar.club', '_blank'),
     },
     {
-      title: 'Business card',
+      title: 'Business <br/> card',
       titleIcon: 'image/services/bag.svg',
       budget: '$1000',
       timeSpent: '14 days',
@@ -129,7 +156,34 @@ const servicesItems = {
       actionForButton: () => window.open('https://bazar.club', '_blank'),
     },
     {
-      title: 'Corporate website',
+      title: 'Corporate <br/> website',
+      titleIcon: 'image/services/high-rise.svg',
+      budget: '$1000',
+      timeSpent: '14 days',
+      forWhom: 'business',
+      contentText: 'You will get complete information about each we offer. offer. offer. offer. offer.',
+      actionForButton: () => window.open('https://bazar.club', '_blank'),
+    },
+    {
+      title: 'Landing <br/> page',
+      titleIcon: 'image/services/card.svg',
+      budget: '$1000',
+      timeSpent: '14 days',
+      forWhom: 'business',
+      contentText: 'You will get complete information about each we offer. offer. offer. offer. offer.',
+      actionForButton: () => window.open('https://bazar.club', '_blank'),
+    },
+    {
+      title: 'Business <br/> card',
+      titleIcon: 'image/services/bag.svg',
+      budget: '$1000',
+      timeSpent: '14 days',
+      forWhom: 'business',
+      contentText: 'You will get complete information about each we offer. offer. offer. offer. offer.',
+      actionForButton: () => window.open('https://bazar.club', '_blank'),
+    },
+    {
+      title: 'Corporate <br/> website',
       titleIcon: 'image/services/high-rise.svg',
       budget: '$1000',
       timeSpent: '14 days',

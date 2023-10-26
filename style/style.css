@@ -645,6 +645,14 @@ header[open-services] .open-header-services {
   line-height: normal;
   padding-bottom: 24px;
 }
+#services #swiper-services .block-cards .block-card .title-block br {
+  display: none;
+}
+@media screen and (max-width: 430px) {
+  #services #swiper-services .block-cards .block-card .title-block br {
+    display: block;
+  }
+}
 #services #swiper-services .block-cards .block-card .main-block {
   padding: 24px 0;
   border-top: #484848 1px solid;

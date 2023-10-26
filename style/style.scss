@@ -598,6 +598,14 @@ header {
           font-weight: 600;
           line-height: normal;
           padding-bottom: 24px;
+
+          br {
+            display: none;
+
+            @include mobile() {
+              display: block;
+            }
+          }
         }
 
         .main-block {
