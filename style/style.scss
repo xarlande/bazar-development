@@ -47,6 +47,9 @@ main {
         line-height: normal;
         text-transform: uppercase;
 
+        @include tablet() {
+          font-size: 64px;
+        }
         @include mobile() {
           font-size: 40px;
         }
@@ -67,24 +70,21 @@ main {
       display: flex;
       justify-content: space-between;
       margin-top: 56px;
+      width: 100%;
 
       @include mobile() {
         display: inline-flex;
         flex-direction: column;
         gap: 15px;
+        align-items: center;
+        margin-top: 48px;
 
         .button-to-form {
           padding: 15px;
+          width: 100%;
         }
       }
     }
-  }
-
-  @include tablet() {
-    padding-top: 43px;
-  }
-  @include mobile() {
-    padding-top: 84px;
   }
 }
 
@@ -119,11 +119,20 @@ header {
     justify-content: space-between;
     justify-items: center;
 
+    @include tablet() {
+      justify-content: space-between;
+    }
+
+
     .nav-block {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
+
+      @include tablet() {
+        display: none;
+      }
 
       nav {
         border-radius: 50px;
@@ -153,12 +162,33 @@ header {
       }
     }
 
-    .burger-btn {
-      display: none;
-      cursor: pointer;
+    .button-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
 
-      .icon-open {
+      .btn-call {
         display: none;
+        padding: 8px;
+        border-radius: 100%;
+        border: 1px solid $toxic-color;
+
+        @include tablet() {
+          display: block;
+        }
+      }
+
+      .burger-btn {
+        display: none;
+        cursor: pointer;
+
+        @include tablet() {
+          display: block;
+        }
+
+        .icon-open {
+          display: none;
+        }
       }
     }
 
@@ -351,34 +381,21 @@ header {
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
       background: rgba(25, 25, 25, 0.74);
 
-      .burger-btn {
-        .icon-close {
-          display: none;
-        }
+      .button-wrapper {
+        .burger-btn {
+          .icon-close {
+            display: none;
+          }
 
-        .icon-open {
-          display: block;
+          .icon-open {
+            display: block;
+          }
         }
       }
-
     }
 
     .menu {
       display: block;
-    }
-  }
-
-  @include tablet() {
-    .header {
-      justify-content: space-between;
-
-      .nav-block {
-        display: none;
-      }
-
-      .burger-btn {
-        display: block;
-      }
     }
   }
 
@@ -559,6 +576,34 @@ header {
   }
 }
 
+%title-font {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.h2-title {
+  @extend %title-font;
+
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.h3-title {
+  @extend %title-font;
+
+  font-size: 16px;
+}
+
+.text-toxic {
+  color: $toxic-color;
+}
+
+.text-gray {
+  color: $text-gray;
+}
+
 #particles-js {
   width: 100%;
   height: 100%;
@@ -705,34 +750,6 @@ header {
       margin-top: unset;
     }
   }
-}
-
-%title-font {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.h2-title {
-  @extend %title-font;
-
-  font-size: 40px;
-  text-transform: uppercase;
-}
-
-.h3-title {
-  @extend %title-font;
-
-  font-size: 16px;
-}
-
-.text-toxic {
-  color: $toxic-color;
-}
-
-.text-gray {
-  color: $text-gray;
 }
 
 #about {
