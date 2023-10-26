@@ -293,7 +293,7 @@ header .header .burger-btn .icon-open {
 }
 @media screen and (max-width: 768px) {
   header .header {
-    padding: 24px 16px;
+    padding: 16px;
   }
 }
 header .menu {
@@ -309,7 +309,7 @@ header .menu {
 header .menu .menu-wrapper {
   width: 100%;
   height: 100%;
-  margin-top: 94px;
+  margin-top: 80px;
   background: #1F1F20;
 }
 @media screen and (max-width: 768px) {
@@ -422,14 +422,18 @@ header .menu .menu-wrapper .menu-content .menu-dropdown.open .dropdown-content {
   display: flex;
 }
 header .menu .menu-wrapper .menu-buttons {
-  margin-top: 40px;
   margin-right: 32px;
   margin-left: 32px;
   padding-top: 24px;
-  border-top: rgba(216, 245, 32, 0.19) 1px solid;
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+@media screen and (max-width: 430px) {
+  header .menu .menu-wrapper .menu-buttons {
+    border-top: rgba(216, 245, 32, 0.19) 1px solid;
+    margin-top: 40px;
+  }
 }
 header .menu .menu-wrapper .menu-buttons .button {
   display: flex;
@@ -1611,6 +1615,7 @@ footer .footer-start-block .container .contacts-block {
 @media screen and (max-width: 430px) {
   footer .footer-start-block .container .contacts-block {
     width: 100%;
+    max-width: unset;
   }
 }
 footer .footer-start-block .container .contacts-block .contact-item {
