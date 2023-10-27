@@ -1,7 +1,7 @@
-@import 'var';
-@import 'fonts';
-@import 'reset';
-@import 'mixins';
+@import "var";
+@import "fonts";
+@import "reset";
+@import "mixins";
 
 body {
   background: $bg-default-color;
@@ -51,7 +51,9 @@ main {
       max-width: 981px;
 
       .title {
-        font-family: DM Sans, serif;
+        font-family:
+          DM Sans,
+          serif;
         font-size: 88px;
         font-style: normal;
         font-weight: 700;
@@ -155,7 +157,9 @@ header {
 
         a,
         p {
-          font-family: Open Sans, serif;
+          font-family:
+            Open Sans,
+            serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -240,7 +244,9 @@ header {
         flex: 2;
 
         .menu-link {
-          font-family: Open Sans, serif;
+          font-family:
+            Open Sans,
+            serif;
           font-size: 24px;
           font-style: normal;
           font-weight: 400;
@@ -257,7 +263,9 @@ header {
           margin-top: 18px;
 
           .dropdown-title {
-            font-family: Open Sans, serif;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 700;
@@ -267,7 +275,7 @@ header {
             align-items: center;
 
             &:after {
-              content: url('./../image/header/chevron-down.svg');
+              content: url("./../image/header/chevron-down.svg");
               width: 24px;
               height: 24px;
               margin-left: 8px;
@@ -289,7 +297,9 @@ header {
               border-radius: 100px;
 
               .menu-child-title {
-                font-family: Open Sans, serif;
+                font-family:
+                  Open Sans,
+                  serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -299,7 +309,7 @@ header {
                 justify-content: center;
 
                 &:after {
-                  content: url('./../image/header/chevron-down.svg');
+                  content: url("./../image/header/chevron-down.svg");
                 }
               }
 
@@ -310,7 +320,9 @@ header {
                 gap: 16px;
 
                 .menu-child-link {
-                  font-family: Open Sans, serif;
+                  font-family:
+                    Open Sans,
+                    serif;
                   font-size: 20px;
                   font-style: normal;
                   font-weight: 400;
@@ -325,7 +337,7 @@ header {
                   color: $toxic-color;
 
                   &:after {
-                    content: url('./../image/header/chevron-down-green.svg');
+                    content: url("./../image/header/chevron-down-green.svg");
                   }
                 }
 
@@ -344,7 +356,7 @@ header {
               color: $toxic-color;
 
               &:after {
-                content: url('./../image/header/chevron-down-green.svg');
+                content: url("./../image/header/chevron-down-green.svg");
               }
             }
 
@@ -431,7 +443,9 @@ header {
         flex: 1;
 
         .section-header {
-          font-family: Open Sans, serif;
+          font-family:
+            Open Sans,
+            serif;
           font-size: 32px;
           font-style: normal;
           font-weight: 600;
@@ -454,7 +468,7 @@ header {
               position: relative;
 
               &::after {
-                content: url('./../image/common/arrow-up-right-white.svg');
+                content: url("./../image/common/arrow-up-right-white.svg");
                 position: absolute;
                 width: 24px;
                 height: 24px;
@@ -470,7 +484,7 @@ header {
               background: $toxic-color;
 
               &::after {
-                content: url('./../image/common/arrow-up-right.svg');
+                content: url("./../image/common/arrow-up-right.svg");
               }
             }
           }
@@ -483,7 +497,9 @@ header {
           gap: 24px;
 
           a {
-            font-family: Open Sans, serif;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -491,7 +507,7 @@ header {
             color: $text-light-gray;
 
             &:before {
-              content: '// ';
+              content: "// ";
             }
           }
         }
@@ -538,7 +554,9 @@ header {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-family: Open Sans, serif;
+  font-family:
+    Open Sans,
+    serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
@@ -587,7 +605,9 @@ header {
 }
 
 %title-font {
-  font-family: Open Sans, serif;
+  font-family:
+    Open Sans,
+    serif;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -637,9 +657,12 @@ header {
 
       .h2-title {
       }
+
       .description {
         width: 50%;
-        font-family: Open Sans, serif;
+        font-family:
+          Open Sans,
+          serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -657,26 +680,79 @@ header {
         }
       }
     }
+
     .content {
       margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
 
       @include tablet() {
         margin-top: 24px;
+      }
+      @include mobile() {
+        display: block;
+        grid-template-columns: unset;
+        gap: unset;
       }
 
       .card {
         background: $bg-dark;
         border-radius: 16px;
         padding: 24px;
+        display: flex;
+        gap: 16px;
+
+        @include tablet() {
+          display: block;
+        }
+        @include mobile() {
+          &:not(:first-child) {
+            margin-top: 16px;
+          }
+        }
 
         .card-big-icon {
+          @include tablet() {
+            display: none;
+          }
         }
+
         .card-body {
           .card-title {
+            color: $toxic-color;
+            font-family: Open Sans, serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            @include mobile() {
+              display: flex;
+              gap: 16px;
+            }
+
             .card-icon {
+              display: none;
+
+              @include tablet() {
+                display: block;
+              }
             }
           }
+
           .card-description {
+            margin-top: 24px;
+            font-family: Open Sans, serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: $text-light-gray;
+
+            @include mobile() {
+              margin-top: 16px;
+            }
           }
         }
       }
@@ -718,7 +794,9 @@ header {
 
         .title-block {
           color: $toxic-color;
-          font-family: Open Sans, serif;
+          font-family:
+            Open Sans,
+            serif;
           font-size: 25px;
           font-style: normal;
           font-weight: 600;
@@ -748,7 +826,9 @@ header {
 
             .name {
               color: $text-light-gray;
-              font-family: Open Sans, serif;
+              font-family:
+                Open Sans,
+                serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -758,7 +838,9 @@ header {
 
             .value {
               color: $toxic-color;
-              font-family: Open Sans, serif;
+              font-family:
+                Open Sans,
+                serif;
               font-size: 20px;
               font-style: normal;
               font-weight: 600;
@@ -775,7 +857,9 @@ header {
           padding-top: 24px;
 
           .footer-text {
-            font-family: Open Sans, serif;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -788,7 +872,7 @@ header {
             width: 100%;
 
             &:after {
-              content: url('../image/common/arrow-up-right-green.svg');
+              content: url("../image/common/arrow-up-right-green.svg");
               width: 24px;
               height: 24px;
             }
@@ -804,7 +888,7 @@ header {
               @extend .button-active;
 
               &:after {
-                content: url('../image/common/arrow-up-right.svg');
+                content: url("../image/common/arrow-up-right.svg");
                 width: 24px;
                 height: 24px;
               }
@@ -871,7 +955,9 @@ header {
       gap: 50px;
       margin-top: 40px;
 
-      font-family: Open Sans, serif;
+      font-family:
+        Open Sans,
+        serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -1013,7 +1099,9 @@ header {
 
       .button {
         padding: 16px;
-        font-family: Open Sans, serif;
+        font-family:
+          Open Sans,
+          serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
@@ -1063,7 +1151,9 @@ footer {
           }
 
           .content {
-            font-family: Open Sans, serif;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -1096,7 +1186,9 @@ footer {
 
           a {
             display: block;
-            font-family: Open Sans, serif;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -1104,7 +1196,7 @@ footer {
           }
 
           a:before {
-            content: '// ';
+            content: "// ";
             color: $toxic-color;
           }
 
@@ -1147,7 +1239,9 @@ footer {
 
           .name {
             color: $text-gray;
-            font-family: Open Sans, serif;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -1156,7 +1250,9 @@ footer {
 
           .value {
             color: $text-no-white-color;
-            font-family: Open Sans, serif;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
