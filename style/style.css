@@ -608,7 +608,7 @@ header[open-services] .open-header-services {
   text-transform: uppercase;
 }
 
-.button-active, #technologies #swiper-technologies .block-cards .block-card:hover .footer-block .button {
+.button-active {
   color: #252529 !important;
   background-color: #d8f520 !important;
 }
@@ -626,10 +626,10 @@ header[open-services] .open-header-services {
   border: #d8f520 1px solid;
 }
 
-.button-active img[active], #technologies #swiper-technologies .block-cards .block-card:hover .footer-block .button img[active] {
+.button-active img[active] {
   display: block;
 }
-.button-active img[no-active], #technologies #swiper-technologies .block-cards .block-card:hover .footer-block .button img[no-active] {
+.button-active img[no-active] {
   display: none;
 }
 
@@ -783,105 +783,137 @@ header[open-services] .open-header-services {
   }
 }
 
-#technologies {
-  background: #1f1f20;
-  padding: 72px 40px;
+#about-us {
+  position: relative;
+  overflow-x: hidden;
 }
-#technologies .buttons-block {
-  margin-top: 24px;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-  overflow: scroll;
+#about-us .content {
+  margin-top: 40px;
 }
 @media screen and (max-width: 430px) {
-  #technologies .buttons-block {
-    margin-top: 32px;
+  #about-us .content {
+    margin-top: 24px;
   }
 }
-#technologies #swiper-technologies .block-cards .block-card {
-  background-color: #363638;
-  border-radius: 56px;
-  padding: 56px 48px;
-  margin: 25px;
-  border: 1px solid rgba(255, 0, 0, 0);
+#about-us .content .card {
+  background: #232325;
+  padding: 40px;
+  width: 60%;
 }
-#technologies #swiper-technologies .block-cards .block-card .title-block {
-  color: #d8f520;
+@media screen and (max-width: 768px) {
+  #about-us .content .card {
+    padding: 32px;
+  }
+}
+@media screen and (max-width: 430px) {
+  #about-us .content .card {
+    padding: 24px;
+    width: 85%;
+  }
+}
+#about-us .content .card .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+#about-us .content .card .card-header .card-title {
   font-family: Open Sans, serif;
-  font-size: 25px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  padding-bottom: 24px;
 }
-#technologies #swiper-technologies .block-cards .block-card .title-block br {
-  display: none;
+#about-us .content .card .card-header .card-number {
+  font-family: Open Sans, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 100%;
+  border: white 1px solid;
 }
-@media screen and (max-width: 430px) {
-  #technologies #swiper-technologies .block-cards .block-card .title-block br {
-    display: block;
+#about-us .content .card .card-description {
+  margin-top: 24px;
+  font-family: Open Sans, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#about-us .content .card:nth-child(odd) {
+  border-radius: 0 16px 16px 0;
+}
+#about-us .content .card:nth-child(even) {
+  border-radius: 16px 0 0 16px;
+  margin-left: auto;
+}
+#about-us .content .card:not(:first-child) {
+  margin-top: 32px;
+}
+#about-us .star-img {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  z-index: -1;
+}
+#about-us .group-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#our-team {
+  background: #1f1f20;
+}
+#our-team .container .content {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  #our-team .container .content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-#technologies #swiper-technologies .block-cards .block-card .main-block {
-  padding: 24px 0;
-  border-top: #484848 1px solid;
-  border-bottom: #484848 1px solid;
+#our-team .container .content .card .image-wrapper {
+  border-radius: 16px;
+  background: #d8f520;
+  padding: 4px;
 }
-#technologies #swiper-technologies .block-cards .block-card .main-block .item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+#our-team .container .content .card .image-wrapper .image {
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
 }
-#technologies #swiper-technologies .block-cards .block-card .main-block .item .name {
+#our-team .container .content .card .card-footer {
+  margin-top: 20px;
+}
+#our-team .container .content .card .card-footer .name {
+  color: #d8f520;
+  font-family: Open Sans, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#our-team .container .content .card .card-footer .position {
   color: #d8d8d8;
   font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  white-space: nowrap;
 }
-#technologies #swiper-technologies .block-cards .block-card .main-block .item .value {
-  color: #d8f520;
-  font-family: Open Sans, serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+
+#technologies #swiper-technologies {
+  margin: 40px 0;
 }
-#technologies #swiper-technologies .block-cards .block-card .main-block .item:not(:last-child) {
-  margin-bottom: 16px;
-}
-#technologies #swiper-technologies .block-cards .block-card .footer-block {
-  padding-top: 24px;
-}
-#technologies #swiper-technologies .block-cards .block-card .footer-block .footer-text {
-  font-family: Open Sans, serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color: #d8d8d8;
-}
-#technologies #swiper-technologies .block-cards .block-card .footer-block .button {
-  margin-top: 24px;
-  width: 100%;
-}
-#technologies #swiper-technologies .block-cards .block-card .footer-block .button:after {
-  content: url("../image/common/arrow-up-right-green.svg");
-  width: 24px;
-  height: 24px;
-}
-#technologies #swiper-technologies .block-cards .block-card:hover {
-  border: 1px solid #d8f520;
-  box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
-}
-#technologies #swiper-technologies .block-cards .block-card:hover .footer-block .button:after {
-  content: url("../image/common/arrow-up-right.svg");
-  width: 24px;
-  height: 24px;
+#technologies #swiper-technologies .swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 #technologies .navigation-block {
   margin-top: 32px;
@@ -898,6 +930,82 @@ header[open-services] .open-header-services {
   #technologies .navigation-block {
     margin-top: unset;
   }
+}
+
+#locations {
+  background: #1f1f20;
+}
+#locations .container .head-block {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  #locations .container .head-block {
+    display: block;
+    justify-content: unset;
+  }
+}
+#locations .container .head-block .description {
+  width: 50%;
+  font-family: Open Sans, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #d8d8d8;
+}
+@media screen and (max-width: 768px) {
+  #locations .container .head-block .description {
+    margin-top: 24px;
+    width: unset;
+  }
+}
+#locations .container .content {
+  display: flex;
+  gap: 32px;
+  margin-top: 48px;
+}
+@media screen and (max-width: 768px) {
+  #locations .container .content {
+    gap: 20px;
+    margin-top: 24px;
+  }
+}
+@media screen and (max-width: 430px) {
+  #locations .container .content {
+    flex-direction: column;
+  }
+}
+#locations .container .content .card {
+  border-radius: 16px;
+  border-top: 1px solid #d8f520;
+  background: #252529;
+}
+#locations .container .content .card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px;
+}
+#locations .container .content .card .card-header .card-title {
+  color: #d8f520;
+  font-family: Open Sans, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+#locations .container .content .card .card-header .card-country {
+  color: #efefef;
+  font-family: Open Sans, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#locations .container .content .card img {
+  width: 100%;
 }
 
 #order-the-service {

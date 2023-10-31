@@ -721,7 +721,9 @@ header {
         .card-body {
           .card-title {
             color: $toxic-color;
-            font-family: Open Sans, serif;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 600;
@@ -743,7 +745,9 @@ header {
 
           .card-description {
             margin-top: 24px;
-            font-family: Open Sans, serif;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -761,141 +765,160 @@ header {
 }
 
 #about-us {
-}
+  position: relative;
+  overflow-x: hidden;
 
-#our-team {
-}
-
-#technologies {
-  background: $bg-gray;
-  padding: 72px 40px;
-
-  .buttons-block {
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 10px;
-    overflow: scroll;
-
-    @include mobile() {
-      margin-top: 32px;
+  .container {
+    .h2-title {
     }
   }
+  .content {
+    margin-top: 40px;
 
-  #swiper-technologies {
-    .block-cards {
-      .block-card {
-        background-color: $bg-light-gray;
-        border-radius: 56px;
-        padding: 56px 48px;
-        margin: 25px;
-        border: 1px solid rgba(255, 0, 0, 0);
+    @include mobile() {
+      margin-top: 24px;
+    }
 
-        .title-block {
-          color: $toxic-color;
+    .card {
+      background: $bg-no-gray;
+      padding: 40px;
+      width: 60%;
+
+      @include tablet() {
+        padding: 32px;
+      }
+      @include mobile() {
+        padding: 24px;
+        width: 85%;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+
+        .card-title {
           font-family:
             Open Sans,
             serif;
-          font-size: 25px;
+          font-size: 32px;
           font-style: normal;
           font-weight: 600;
           line-height: normal;
-          padding-bottom: 24px;
+        }
+        .card-number {
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-align: center;
+          padding: 10px 12px;
+          border-radius: 100%;
+          border: white 1px solid;
+        }
+      }
+      .card-description {
+        margin-top: 24px;
+        font-family:
+          Open Sans,
+          serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      &:nth-child(odd) {
+        border-radius: 0 16px 16px 0;
+      }
+      &:nth-child(even) {
+        border-radius: 16px 0 0 16px;
+        margin-left: auto;
+      }
+      &:not(:first-child) {
+        margin-top: 32px;
+      }
+    }
+  }
+  .star-img {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: -1;
+  }
+  .group-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
 
-          br {
-            display: none;
+#our-team {
+  background: $bg-gray;
 
-            @include mobile() {
-              display: block;
-            }
+  .container {
+    .h2-title {
+    }
+    .content {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+
+      @include tablet() {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card {
+        .image-wrapper {
+          border-radius: 16px;
+          background: $toxic-color;
+          padding: 4px;
+
+          .image {
+            border-radius: 24px;
+            width: 100%;
+            height: 100%;
           }
         }
+        .card-footer {
+          margin-top: 20px;
 
-        .main-block {
-          padding: 24px 0;
-          border: {
-            top: $border-darkness-gray 1px solid;
-            bottom: $border-darkness-gray 1px solid;
-          }
-
-          .item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-
-            .name {
-              color: $text-light-gray;
-              font-family:
-                Open Sans,
-                serif;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: normal;
-              white-space: nowrap;
-            }
-
-            .value {
-              color: $toxic-color;
-              font-family:
-                Open Sans,
-                serif;
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 600;
-              line-height: normal;
-            }
-          }
-
-          .item:not(:last-child) {
-            margin-bottom: 16px;
-          }
-        }
-
-        .footer-block {
-          padding-top: 24px;
-
-          .footer-text {
+          .name {
+            color: $toxic-color;
             font-family:
               Open Sans,
               serif;
-            font-size: 20px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+          .position {
+            color: $text-light-gray;
+            font-family:
+              Open Sans,
+              serif;
+            font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            color: $text-light-gray;
-          }
-
-          .button {
-            margin-top: 24px;
-            width: 100%;
-
-            &:after {
-              content: url("../image/common/arrow-up-right-green.svg");
-              width: 24px;
-              height: 24px;
-            }
-          }
-        }
-
-        &:hover {
-          border: 1px solid #d8f520;
-          box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
-
-          .footer-block {
-            .button {
-              @extend .button-active;
-
-              &:after {
-                content: url("../image/common/arrow-up-right.svg");
-                width: 24px;
-                height: 24px;
-              }
-            }
           }
         }
       }
+    }
+  }
+}
+
+#technologies {
+  #swiper-technologies {
+    margin: 40px 0;
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -915,6 +938,90 @@ header {
 }
 
 #locations {
+  background: $bg-gray;
+
+  .container {
+    .head-block {
+      display: flex;
+      justify-content: space-between;
+
+      @include tablet() {
+        display: block;
+        justify-content: unset;
+      }
+
+      .h2-title {
+      }
+
+      .description {
+        width: 50%;
+        font-family:
+          Open Sans,
+          serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $text-light-gray;
+
+        @include tablet() {
+          margin-top: 24px;
+          width: unset;
+        }
+      }
+    }
+    .content {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+
+      @include tablet(){
+        gap: 20px;
+        margin-top: 24px;
+      }
+      @include mobile(){
+        flex-direction: column;
+      }
+
+      .card {
+        border-radius: 16px;
+        border-top: 1px solid $toxic-color;
+        background: $bg-no-light-gray;
+
+        .card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 24px 16px;
+
+          .card-title {
+            color: $toxic-color;
+            font-family:
+              Open Sans,
+              serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: capitalize;
+          }
+          .card-country {
+            color: $text-no-white-color;
+            font-family:
+              Open Sans,
+              serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 #order-the-service {

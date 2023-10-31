@@ -3,22 +3,21 @@ const laptopLWidth = 1440;
 const mobileWidth = 431;
 const tabletWidth = 769;
 
-const swiperReviews = new Swiper('#swiper-reviews', {
-  slidesPerView: 1,
+const swiperReviews = new Swiper('#swiper-technologies', {
+  slidesPerView: 2,
   loop: true,
-  spaceBetween: 40,
   breakpoints: {
     [mobileWidth]: {
-      slidesPerView: 2,
-    },
-    [laptopLWidth]: {
       slidesPerView: 4,
+    },
+    [laptopWidth]: {
+      slidesPerView: 5,
     },
   },
 });
 
-const reviewsButtonNext = document.querySelector('.reviews-button-next');
-const reviewsButtonPrev = document.querySelector('.reviews-button-prev');
+const reviewsButtonNext = document.querySelector('.technologies-button-next');
+const reviewsButtonPrev = document.querySelector('.technologies-button-prev');
 
 reviewsButtonNext?.addEventListener('click', () => swiperReviews.slideNext());
 reviewsButtonPrev?.addEventListener('click', () => swiperReviews.slidePrev());
