@@ -843,6 +843,49 @@ header[open-services] .open-header-services {
 #our-project .container .content .project-block:hover .our-project-block .description-block > .button-block > .button {
   background: #d8f520;
 }
+#our-project .container .download-more {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  #our-project .container .download-more {
+    margin-top: 32px;
+  }
+}
+@media screen and (max-width: 430px) {
+  #our-project .container .download-more {
+    margin-top: 24px;
+  }
+}
+#our-project .container .download-more .title {
+  font-family: Open Sans, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (max-width: 430px) {
+  #our-project .container .download-more .title {
+    font-size: 16px;
+  }
+}
+#our-project .container .download-more-button {
+  all: unset;
+  padding: 26px;
+  border-radius: 100%;
+  cursor: pointer;
+  background: #363638;
+}
+@media screen and (max-width: 430px) {
+  #our-project .container .download-more-button {
+    padding: 16px;
+  }
+}
 
 #order-the-service {
   position: relative;
