@@ -680,19 +680,22 @@ header[open-services] .open-header-services {
   border-bottom: #d8f520 1px solid;
 }
 #main-contact-us .container {
-  margin: 130px 0;
+  margin-top: 130px;
+  margin-bottom: 130px;
   display: flex;
   justify-content: space-around;
 }
 @media screen and (max-width: 768px) {
   #main-contact-us .container {
-    margin: 70px 0;
+    margin-top: 70px;
+    margin-bottom: 70px;
     justify-content: space-between;
   }
 }
 @media screen and (max-width: 430px) {
   #main-contact-us .container {
-    margin: 48px 0;
+    margin-top: 70px;
+    margin-bottom: 70px;
     flex-direction: column;
     justify-content: unset;
     gap: 24px;

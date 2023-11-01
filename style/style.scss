@@ -648,16 +648,19 @@ header {
   border-bottom: $toxic-color 1px solid;
 
   .container {
-    margin: 130px 0;
+    margin-top: 130px;
+    margin-bottom: 130px;
     display: flex;
     justify-content: space-around;
 
     @include tablet(){
-      margin: 70px 0;
+      margin-top: 70px;
+      margin-bottom: 70px;
       justify-content: space-between;
     }
     @include mobile(){
-      margin: 48px 0;
+      margin-top: 70px;
+      margin-bottom: 70px;
       flex-direction: column;
       justify-content: unset;
       gap: 24px;
