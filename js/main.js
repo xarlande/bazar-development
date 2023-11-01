@@ -105,18 +105,50 @@ menuChildDropdownList.forEach(menuChildDropdown => {
   });
 });
 
-const navigationButtonsForOurProject = document.querySelectorAll('.navigation-button');
+if (window.innerWidth > 768) {
+  const chevrons = document.querySelectorAll('#work-with-us .chevrons img');
 
-navigationButtonsForOurProject.forEach(value => {
-  value.addEventListener('click', event => {
+  let prevChevrons = 0;
+  let currentChevrons = 0;
+
+  setInterval(() => {
+    const chevronsLength = chevrons.length;
+    prevChevrons = currentChevrons;
+    if (chevronsLength > currentChevrons + 1) {
+      currentChevrons += 1;
+    } else {
+      currentChevrons = 0;
+    }
+
+    chevrons[prevChevrons].src = 'image/workWithUs/ion_chevron-forward-outline(gray).svg';
+    chevrons[currentChevrons].src = 'image/workWithUs/ion_chevron-forward-outline(white).svg';
+  }, 200);
+}
+
+const faqList = document.querySelectorAll('#faq .faq-list .faq-item');
+
+faqList.forEach(element => {
+  element.addEventListener('click', event => {
     const target = event.target;
+    const button = target.closest('.button-rounded');
 
-    target.closest('.navigation-button').classList.add('active');
+    if (button) {
+      const faqItem = target.closest('.faq-item');
 
-    navigationButtonsForOurProject.forEach(item => {
-      if (item !== target.closest('.navigation-button')) {
-        item.classList.remove('active');
+      faqList.forEach(faqItemElement => {
+        if (faqItemElement !== element) {
+          faqItemElement.querySelector('.button-rounded').classList.remove('button-active');
+
+          faqItemElement.classList.remove('faq-item-active');
+        }
+      });
+      button.classList.toggle('button-active');
+
+      if (button.classList.contains('button-active')) {
+        faqItem.classList.add('faq-item-active');
+      } else {
+        faqItem.classList.remove('faq-item-active');
       }
-    });
+    }
   });
 });
