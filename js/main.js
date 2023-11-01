@@ -104,3 +104,19 @@ menuChildDropdownList.forEach(menuChildDropdown => {
     }
   });
 });
+
+const navigationButtonsForOurProject = document.querySelectorAll('.navigation-button');
+
+navigationButtonsForOurProject.forEach(value => {
+  value.addEventListener('click', event => {
+    const target = event.target;
+
+    target.closest('.navigation-button').classList.add('active');
+
+    navigationButtonsForOurProject.forEach(item => {
+      if (item !== target.closest('.navigation-button')) {
+        item.classList.remove('active');
+      }
+    });
+  });
+});

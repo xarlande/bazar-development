@@ -754,7 +754,7 @@ header {
           z-index: 10;
 
           .title {
-            font-family: DM Sans;
+            font-family: DM Sans, serif;
             font-size: 28px;
             font-style: normal;
             font-weight: 700;
@@ -780,7 +780,7 @@ header {
 
             .description {
               color: $text-no-white-color;
-              font-family: Open Sans;
+              font-family: Open Sans, serif;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
