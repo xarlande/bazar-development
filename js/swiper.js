@@ -395,7 +395,7 @@ servicesButtonPrev.addEventListener('click', () => {
   }
 });
 
-let currentServicesType = 'seo';
+let currentServicesType = 'development';
 
 const generateItemsForServicesSwiper = () => {
   const container = document.createElement('div');
@@ -453,7 +453,7 @@ const generateItemsForServicesSwiper = () => {
 };
 
 servicesButtons.forEach(element => {
-  if (element.getAttribute('value') === 'seo') {
+  if (element.getAttribute('value') === currentServicesType) {
     element.classList.add('button-active');
   }
 
