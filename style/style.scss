@@ -811,8 +811,6 @@ header {
 }
 
 #cards {
-  background: $bg-gray;
-
   .container {
     .h2-title {
     }
@@ -987,9 +985,13 @@ header {
 }
 
 #steps-of-work {
-  background: linear-gradient(0deg, rgba(216, 245, 32, 0.12) 0%, rgba(216, 245, 32, 0) 75.89%);
+  background: $bg-gray;
+  position: relative;
 
   .container {
+    position: relative;
+    z-index: 1;
+
     .card {
       margin-top: 60px;
       margin-bottom: 30px;
@@ -1081,6 +1083,14 @@ header {
         }
       }
     }
+  }
+  .gradient-background {
+    background: linear-gradient(0deg, rgba(216, 245, 32, 0.12) 0%, rgba(216, 245, 32, 0) 75.89%);
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
 }
 

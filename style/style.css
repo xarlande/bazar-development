@@ -833,9 +833,6 @@ header[open-services] .open-header-services {
   }
 }
 
-#cards {
-  background: #1f1f20;
-}
 #cards .container .content {
   margin-top: 37px;
 }
@@ -979,7 +976,12 @@ header[open-services] .open-header-services {
 }
 
 #steps-of-work {
-  background: linear-gradient(0deg, rgba(216, 245, 32, 0.12) 0%, rgba(216, 245, 32, 0) 75.89%);
+  background: #1f1f20;
+  position: relative;
+}
+#steps-of-work .container {
+  position: relative;
+  z-index: 1;
 }
 #steps-of-work .container .card {
   margin-top: 60px;
@@ -1058,6 +1060,14 @@ header[open-services] .open-header-services {
 #steps-of-work .container .pagination .pagination-button.active, #steps-of-work .container .pagination .pagination-button:hover {
   color: #171717;
   background: #d8f520;
+}
+#steps-of-work .gradient-background {
+  background: linear-gradient(0deg, rgba(216, 245, 32, 0.12) 0%, rgba(216, 245, 32, 0) 75.89%);
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 #faq {
