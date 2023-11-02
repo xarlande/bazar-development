@@ -1,4 +1,3 @@
-particlesJS.load('particles-js', 'assets/particles.json');
 particlesJS.load('particles-js-duplicate', 'assets/particles.json');
 
 const buttonToBazar = document.querySelectorAll('.button-to-bazar');
@@ -104,26 +103,6 @@ menuChildDropdownList.forEach(menuChildDropdown => {
     }
   });
 });
-
-if (window.innerWidth > 768) {
-  const chevrons = document.querySelectorAll('#work-with-us .chevrons img');
-
-  let prevChevrons = 0;
-  let currentChevrons = 0;
-
-  setInterval(() => {
-    const chevronsLength = chevrons.length;
-    prevChevrons = currentChevrons;
-    if (chevronsLength > currentChevrons + 1) {
-      currentChevrons += 1;
-    } else {
-      currentChevrons = 0;
-    }
-
-    chevrons[prevChevrons].src = 'image/workWithUs/ion_chevron-forward-outline(gray).svg';
-    chevrons[currentChevrons].src = 'image/workWithUs/ion_chevron-forward-outline(white).svg';
-  }, 200);
-}
 
 const faqList = document.querySelectorAll('#faq .faq-list .faq-item');
 
