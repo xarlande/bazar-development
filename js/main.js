@@ -1,6 +1,3 @@
-particlesJS.load('particles-js', 'assets/particles.json');
-particlesJS.load('particles-js-duplicate', 'assets/particles.json');
-
 const buttonToBazar = document.querySelectorAll('.button-to-bazar');
 
 buttonToBazar.forEach(item =>
@@ -8,33 +5,6 @@ buttonToBazar.forEach(item =>
     window.open('https://www.bazar.club', '_blank');
   })
 );
-
-const buttonToScrollFirstSection = document.querySelector('#button-scroll-to-first-section');
-
-if (buttonToScrollFirstSection) {
-  const firstSection = document.querySelector('section');
-
-  buttonToScrollFirstSection.addEventListener('click', () => {
-    firstSection.scrollIntoView({behavior: 'smooth', block: 'center'});
-  });
-}
-
-const selectForOrderTheService = document.querySelector('#select-for-order-the-service');
-const selectDropdown = selectForOrderTheService.querySelector('.dropdown-body');
-const dropdownItems = selectDropdown.querySelectorAll('.dropdown-item');
-
-selectForOrderTheService.addEventListener('click', event => {
-  event.stopPropagation();
-  selectForOrderTheService.classList.toggle('select-open');
-});
-selectDropdown.addEventListener('click', event => {
-  event.stopPropagation();
-});
-dropdownItems.forEach(component => {
-  component.addEventListener('click', () => {
-    selectForOrderTheService.classList.remove('select-open');
-  });
-});
 
 const openServices = document.querySelector('.open-header-services');
 const header = document.querySelector('header');
@@ -64,16 +34,6 @@ burgerBtn.addEventListener('click', () => {
   }
 });
 
-const buttonToForm = document.querySelectorAll('.button-to-form');
-const form = document.querySelector('#order-the-service .modal');
-
-buttonToForm.forEach(element => {
-  element.addEventListener('click', () => {
-    closeBurgerBtn();
-    form.scrollIntoView({behavior: 'smooth', block: 'center'});
-  });
-});
-
 const menuDropdownList = document.querySelectorAll('.menu-dropdown');
 
 menuDropdownList.forEach(menuDropdown => {
@@ -101,54 +61,6 @@ menuChildDropdownList.forEach(menuChildDropdown => {
 
     if (target.closest('.menu-child-title')) {
       menu.classList.toggle('open');
-    }
-  });
-});
-
-if (window.innerWidth > 768) {
-  const chevrons = document.querySelectorAll('#work-with-us .chevrons img');
-
-  let prevChevrons = 0;
-  let currentChevrons = 0;
-
-  setInterval(() => {
-    const chevronsLength = chevrons.length;
-    prevChevrons = currentChevrons;
-    if (chevronsLength > currentChevrons + 1) {
-      currentChevrons += 1;
-    } else {
-      currentChevrons = 0;
-    }
-
-    chevrons[prevChevrons].src = 'image/workWithUs/ion_chevron-forward-outline(gray).svg';
-    chevrons[currentChevrons].src = 'image/workWithUs/ion_chevron-forward-outline(white).svg';
-  }, 200);
-}
-
-const faqList = document.querySelectorAll('#faq .faq-list .faq-item');
-
-faqList.forEach(element => {
-  element.addEventListener('click', event => {
-    const target = event.target;
-    const button = target.closest('.button-rounded');
-
-    if (button) {
-      const faqItem = target.closest('.faq-item');
-
-      faqList.forEach(faqItemElement => {
-        if (faqItemElement !== element) {
-          faqItemElement.querySelector('.button-rounded').classList.remove('button-active');
-
-          faqItemElement.classList.remove('faq-item-active');
-        }
-      });
-      button.classList.toggle('button-active');
-
-      if (button.classList.contains('button-active')) {
-        faqItem.classList.add('faq-item-active');
-      } else {
-        faqItem.classList.remove('faq-item-active');
-      }
     }
   });
 });
