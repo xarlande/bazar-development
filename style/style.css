@@ -821,7 +821,7 @@ header[open-services] .open-header-services {
   }
 }
 #why-us .container .content .card .title {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -905,7 +905,7 @@ header[open-services] .open-header-services {
   flex: 1;
 }
 #work-with-us .container > div .h2-title {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -913,7 +913,7 @@ header[open-services] .open-header-services {
   text-transform: uppercase;
 }
 #work-with-us .container > div .title {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -922,7 +922,7 @@ header[open-services] .open-header-services {
 }
 #work-with-us .container > div .description {
   color: #363638;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -978,6 +978,88 @@ header[open-services] .open-header-services {
   }
 }
 
+#steps-of-work {
+  background: linear-gradient(0deg, rgba(216, 245, 32, 0.12) 0%, rgba(216, 245, 32, 0) 75.89%);
+}
+#steps-of-work .container .card {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 430px) {
+  #steps-of-work .container .card {
+    flex-direction: column;
+  }
+}
+#steps-of-work .container .card .image-block .image-wrapper {
+  border-radius: 100%;
+  border: 16px solid #363638;
+  background: #252529;
+  padding: 56px;
+}
+@media screen and (max-width: 768px) {
+  #steps-of-work .container .card .image-block .image-wrapper {
+    padding: 36px;
+  }
+}
+#steps-of-work .container .card .content-card {
+  max-width: 660px;
+}
+#steps-of-work .container .card .content-card .content-step {
+  color: #d8f520;
+  font-family: Open Sans, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+#steps-of-work .container .card .content-card .content-title {
+  margin-top: 16px;
+  color: #e5e0e0;
+  font-family: Open Sans, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110.5%;
+  text-transform: uppercase;
+}
+#steps-of-work .container .card .content-card .content-description {
+  margin-top: 8px;
+  color: #e5e0e0;
+  font-family: Open Sans, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110.5%;
+}
+#steps-of-work .container .pagination {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+#steps-of-work .container .pagination .pagination-button {
+  all: unset;
+  cursor: pointer;
+  padding: 16px 24px;
+  color: #d8f520;
+  font-family: Open Sans, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  border: 1px solid #d8f520;
+  border-radius: 100%;
+}
+#steps-of-work .container .pagination .pagination-button.active, #steps-of-work .container .pagination .pagination-button:hover {
+  color: #171717;
+  background: #d8f520;
+}
+
 #faq {
   overflow-x: hidden;
   position: relative;
@@ -999,7 +1081,7 @@ header[open-services] .open-header-services {
   color: #d8f520;
   align-items: center;
   gap: 15px;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -1012,7 +1094,7 @@ header[open-services] .open-header-services {
 #faq .faq-list .faq-item .content {
   color: #d8d8d8;
   margin-top: 40px;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -1074,7 +1156,7 @@ header[open-services] .open-header-services {
 }
 #services #swiper-services .block-cards .block-card .title-block {
   color: #d8f520;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
@@ -1101,7 +1183,7 @@ header[open-services] .open-header-services {
 }
 #services #swiper-services .block-cards .block-card .main-block .item .name {
   color: #d8d8d8;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1110,7 +1192,7 @@ header[open-services] .open-header-services {
 }
 #services #swiper-services .block-cards .block-card .main-block .item .value {
   color: #d8f520;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -1123,7 +1205,7 @@ header[open-services] .open-header-services {
   padding-top: 24px;
 }
 #services #swiper-services .block-cards .block-card .footer-block .footer-text {
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;

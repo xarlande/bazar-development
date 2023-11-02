@@ -793,7 +793,9 @@ header {
         }
 
         .title {
-          font-family: Open Sans;
+          font-family:
+            Open Sans,
+            serif;
           font-size: 20px;
           font-style: normal;
           font-weight: 600;
@@ -845,7 +847,7 @@ header {
           @include tablet() {
             flex: 1;
           }
-          @include mobile(){
+          @include mobile() {
             padding-bottom: 16px;
             border-right: unset;
             border-bottom: 1px solid $border-light-gray;
@@ -886,7 +888,9 @@ header {
       flex: 1;
 
       .h2-title {
-        font-family: Open Sans;
+        font-family:
+          Open Sans,
+          serif;
         font-size: 48px;
         font-style: normal;
         font-weight: 700;
@@ -895,7 +899,9 @@ header {
       }
 
       .title {
-        font-family: Open Sans;
+        font-family:
+          Open Sans,
+          serif;
         font-size: 28px;
         font-style: normal;
         font-weight: 600;
@@ -905,7 +911,9 @@ header {
 
       .description {
         color: $bg-light-gray;
-        font-family: Open Sans;
+        font-family:
+          Open Sans,
+          serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -978,6 +986,104 @@ header {
   }
 }
 
+#steps-of-work {
+  background: linear-gradient(0deg, rgba(216, 245, 32, 0.12) 0%, rgba(216, 245, 32, 0) 75.89%);
+
+  .container {
+    .card {
+      margin-top: 60px;
+      margin-bottom: 30px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+
+      @include mobile() {
+        flex-direction: column;
+      }
+
+      .image-block {
+        .image-wrapper {
+          border-radius: 100%;
+          border: 16px solid $bg-light-gray;
+          background: $bg-no-light-gray;
+          padding: 56px;
+
+          @include tablet() {
+            padding: 36px;
+          }
+        }
+      }
+      .content-card {
+        max-width: 660px;
+
+        .content-step {
+          color: $toxic-color;
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+        .content-title {
+          margin-top: 16px;
+          color: #e5e0e0;
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 110.5%;
+          text-transform: uppercase;
+        }
+        .content-description {
+          margin-top: 8px;
+          color: #e5e0e0;
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 110.5%;
+        }
+      }
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+
+      .pagination-button {
+        all: unset;
+        cursor: pointer;
+        padding: 16px 24px;
+        color: $toxic-color;
+        font-family:
+          Open Sans,
+          serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        border: 1px solid $toxic-color;
+        border-radius: 100%;
+
+        &.active,
+        &:hover {
+          color: $bg-dark;
+          background: $toxic-color;
+        }
+      }
+    }
+  }
+}
+
 #faq {
   overflow-x: hidden;
 
@@ -1004,7 +1110,9 @@ header {
         color: $toxic-color;
         align-items: center;
         gap: 15px;
-        font-family: Open Sans;
+        font-family:
+          Open Sans,
+          serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
@@ -1019,7 +1127,9 @@ header {
       .content {
         color: $text-light-gray;
         margin-top: 40px;
-        font-family: Open Sans;
+        font-family:
+          Open Sans,
+          serif;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -1092,7 +1202,9 @@ header {
 
         .title-block {
           color: $toxic-color;
-          font-family: Open Sans;
+          font-family:
+            Open Sans,
+            serif;
           font-size: 25px;
           font-style: normal;
           font-weight: 600;
@@ -1122,7 +1234,9 @@ header {
 
             .name {
               color: $text-light-gray;
-              font-family: Open Sans;
+              font-family:
+                Open Sans,
+                serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -1132,7 +1246,9 @@ header {
 
             .value {
               color: $toxic-color;
-              font-family: Open Sans;
+              font-family:
+                Open Sans,
+                serif;
               font-size: 20px;
               font-style: normal;
               font-weight: 600;
@@ -1149,7 +1265,9 @@ header {
           padding-top: 24px;
 
           .footer-text {
-            font-family: Open Sans;
+            font-family:
+              Open Sans,
+              serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;

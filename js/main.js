@@ -152,3 +152,60 @@ faqList.forEach(element => {
     }
   });
 });
+
+const paginationButtons = document.querySelectorAll('.pagination .pagination-button');
+const stepsOfWorkBody = document.querySelector('#steps-of-work .card');
+const stepsOfWorkItems = {
+  1: {
+    image: 'image/stepsOfWork/Vector.svg',
+    title: 'Residentian roofing',
+    description:
+      'Residentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofing',
+  },
+  2: {
+    image: 'image/stepsOfWork/Vector.svg',
+    title: 'Residentian roofing',
+    description:
+      'Residentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofing',
+  },
+  3: {
+    image: 'image/stepsOfWork/Vector.svg',
+    title: 'Residentian roofing',
+    description:
+      'Residentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofing',
+  },
+  4: {
+    image: 'image/stepsOfWork/Vector.svg',
+    title: 'Residentian roofing',
+    description:
+      'Residentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofingResidentian roofing',
+  },
+};
+
+paginationButtons.forEach(item => {
+  item.addEventListener('click', event => {
+    const target = event.target;
+
+    const value = target.getAttribute('value');
+    const currentData = stepsOfWorkItems[value];
+
+    paginationButtons.forEach(item => {
+      item.classList.remove('active');
+    });
+
+    stepsOfWorkBody.innerHTML = `
+          <div class="image-block">
+            <div class="image-wrapper">
+              <img alt="" src="${currentData.image}" />
+            </div>
+          </div>
+          <div class="content-card">
+            <p class="content-step">//step ${value}</p>
+            <p class="content-title">${currentData.title}</p>
+            <p class="content-description">${currentData.description}</p>
+          </div> 
+    `;
+
+    target.classList.add('active');
+  });
+});
