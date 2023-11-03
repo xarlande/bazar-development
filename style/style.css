@@ -158,27 +158,72 @@ main .container {
   padding-top: 50px;
   padding-bottom: 70px;
 }
+main .container .content {
+  position: relative;
+  z-index: 1;
+}
 main .container .content .content-first {
   max-width: 485px;
-  color: #8b8b8b;
+  color: #b7b7b7;
   font-family: Open Sans, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+@media screen and (max-width: 768px) {
+  main .container .content .content-first {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 430px) {
+  main .container .content .content-first {
+    max-width: 65%;
+  }
+}
 main .container .content .content-last {
   display: flex;
   align-items: flex-end;
+}
+@media screen and (max-width: 768px) {
+  main .container .content .content-last {
+    margin-top: 32px;
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (max-width: 430px) {
+  main .container .content .content-last {
+    margin-top: unset;
+    flex-direction: column;
+  }
 }
 main .container .content .content-last .image-block {
   display: inline-block;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  main .container .content .content-last .image-block {
+    margin-right: 37px;
+    margin-left: -37px;
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 430px) {
+  main .container .content .content-last .image-block {
+    margin-right: unset;
+    margin-left: unset;
+    margin-top: unset;
+  }
+}
 main .container .content .content-last .image-block .image-absolute {
   right: 0;
   top: -25%;
   position: absolute;
+}
+@media screen and (max-width: 768px) {
+  main .container .content .content-last .image-block .image-absolute {
+    width: 100px;
+  }
 }
 main .container .content .content-last .image-block .image-no-absolute {
   width: 100%;
@@ -186,6 +231,33 @@ main .container .content .content-last .image-block .image-no-absolute {
 main .container .content .content-last .content-last-wrapper {
   flex: auto;
   margin-bottom: 125px;
+  max-width: 310px;
+  margin-left: -50px;
+}
+@media screen and (max-width: 768px) {
+  main .container .content .content-last .content-last-wrapper {
+    max-width: 220px;
+    margin-left: unset;
+  }
+}
+@media screen and (max-width: 430px) {
+  main .container .content .content-last .content-last-wrapper {
+    max-width: unset;
+    margin-bottom: unset;
+  }
+}
+main .container .content .content-last .content-last-wrapper .description-content {
+  color: #b7b7b7;
+  font-family: Open Sans, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+main .container .content .content-last .content-last-wrapper .button {
+  margin-top: 16px;
+  padding: 16px;
+  width: 100%;
 }
 main .background-gradient {
   position: absolute;
@@ -194,6 +266,16 @@ main .background-gradient {
   right: 0;
   bottom: 0;
   background: linear-gradient(0deg, rgba(216, 245, 32, 0.12) 0%, rgba(216, 245, 32, 0) 75.89%);
+}
+main .background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  main .background-image {
+    display: none;
+  }
 }
 
 section {
@@ -635,6 +717,167 @@ header[open-services] .open-header-services {
   position: absolute;
   top: 0;
   z-index: -1;
+}
+
+#passport {
+  background: #1f1f20;
+}
+#passport .container .content {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  #passport .container .content {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 430px) {
+  #passport .container .content {
+    flex-direction: column;
+  }
+}
+#passport .container .content .card {
+  background: #363638;
+  padding: 24px;
+  border-radius: 32px;
+}
+@media screen and (max-width: 768px) {
+  #passport .container .content .card {
+    border-radius: 16px;
+  }
+}
+#passport .container .content .card-title {
+  color: #d8f520;
+  font-family: Open Sans, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#passport .container .content .card-description {
+  margin-top: 16px;
+  font-family: Open Sans, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#passport .container .content .first-block {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  #passport .container .content .first-block {
+    flex: unset;
+    gap: 24px;
+  }
+}
+#passport .container .content .first-block .card {
+  padding: 36px 24px;
+  display: flex;
+  gap: 16px;
+  border-radius: 16px;
+}
+@media screen and (max-width: 768px) {
+  #passport .container .content .first-block .card {
+    padding: 24px;
+  }
+}
+#passport .container .content .main-block {
+  flex: 4;
+}
+@media screen and (max-width: 768px) {
+  #passport .container .content .main-block {
+    flex: unset;
+  }
+}
+#passport .container .content .main-block .card-content {
+  margin-top: 22px;
+}
+#passport .container .content .main-block .card-content img {
+  width: 100%;
+}
+#passport .container .content .last-block {
+  flex: 4;
+}
+@media screen and (max-width: 768px) {
+  #passport .container .content .last-block {
+    flex: unset;
+  }
+}
+#passport .container .content .last-block .card-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 430px) {
+  #passport .container .content .last-block .card-content {
+    margin-top: 32px;
+  }
+}
+#passport .container .content .last-block .card-content .rows {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  #passport .container .content .last-block .card-content .rows {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+  }
+}
+@media screen and (max-width: 430px) {
+  #passport .container .content .last-block .card-content .rows {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#passport .container .content .last-block .card-content .rows img {
+  justify-self: center;
+}
+@media screen and (max-width: 768px) {
+  #passport .container .content .last-block .card-content .rows img:nth-last-child(-n+3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  #passport .container .content .last-block .card-content .rows img:nth-last-child(-n+3) {
+    display: block;
+  }
+}
+
+#goals .container .content {
+  margin-top: 40px;
+  display: flex;
+  gap: 56px;
+}
+#goals .container .content .card {
+  flex: auto;
+  border: #d8f520 1px solid;
+  border-radius: 16px;
+  padding: 24px;
+}
+#goals .container .content .card img {
+  margin-bottom: 24px;
+}
+#goals .container .content .card .card-title {
+  font-family: Open Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#goals .container .content .card .card-description {
+  margin-top: 16px;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  word-break: break-all;
 }
 
 #order-the-service {
