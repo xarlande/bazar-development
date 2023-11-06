@@ -1191,6 +1191,12 @@ header[open-services] .open-header-services {
   padding: 16px;
   cursor: auto;
 }
+@media screen and (max-width: 430px) {
+  #our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .link-block .button {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
 #our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .description-block {
   display: flex;
   flex-direction: row;
