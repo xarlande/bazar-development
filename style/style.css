@@ -1144,6 +1144,129 @@ header[open-services] .open-header-services {
   transform: translate3d(25%, -25%, 0);
 }
 
+#our-projects .buttons-block {
+  margin-top: 32px;
+  padding-bottom: 12px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-direction: row;
+  overflow: scroll;
+}
+@media screen and (max-width: 430px) {
+  #our-projects .buttons-block {
+    justify-content: unset;
+  }
+}
+#our-projects .buttons-block .button {
+  height: 36px;
+  padding: 16px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+  #our-projects .container-inner {
+    padding: 0;
+  }
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block {
+  margin: 25px;
+  border: 1px transparent solid;
+  display: flex;
+  align-items: end;
+  padding: 30px 24px;
+  height: 546px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  #our-projects .container-inner #swiper-our-project .swiper-slide .project-block {
+    margin: 0;
+  }
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block {
+  z-index: 10;
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .title {
+  font-family: DM Sans, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .link-block {
+  margin: 16px 0;
+  display: flex;
+  gap: 16px;
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .link-block .button {
+  padding: 16px;
+  cursor: auto;
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .description-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .description-block .description {
+  color: #efefef;
+  font-family: Open Sans, serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .description-block .button-block {
+  z-index: 10;
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .description-block .button-block .button {
+  margin-left: 5px;
+  background: #efefef;
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .description-block .button-block .button:before {
+  content: url("./../image/common/arrow-up-right-40px.svg");
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block .shadow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, #191919 30.2%, rgba(25, 25, 25, 0.6) 62.59%, rgba(25, 25, 25, 0) 99.91%);
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block:hover {
+  border: 1px solid #d8f520;
+  box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
+}
+@media screen and (max-width: 768px) {
+  #our-projects .container-inner #swiper-our-project .swiper-slide .project-block:hover {
+    border: 1px solid transparent;
+    box-shadow: unset;
+  }
+}
+#our-projects .container-inner #swiper-our-project .swiper-slide .project-block:hover .our-project-block .description-block > .button-block > .button {
+  background: #d8f520;
+}
+#our-projects .navigation-block {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+@media screen and (max-width: 430px) {
+  #our-projects .navigation-block {
+    justify-content: space-between;
+  }
+}
+
 #order-the-service {
   position: relative;
   padding-top: 100px !important;
