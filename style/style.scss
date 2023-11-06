@@ -790,6 +790,11 @@ header {
             .button {
               padding: 16px;
               cursor: auto;
+
+              @include mobile() {
+                padding: 10px;
+                font-size: 12px;
+              }
             }
           }
 
