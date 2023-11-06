@@ -825,12 +825,12 @@ header {
         }
 
         .card-content {
-          height: 100%;
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          justify-content: start;
+          gap: 20px;
 
-          @include mobile() {
-            margin-top: 32px;
+          .card-description {
           }
 
           .rows {
@@ -842,9 +842,11 @@ header {
             @include tablet() {
               grid-template-columns: repeat(2, 1fr);
               column-gap: 24px;
+              row-gap: 24px;
             }
             @include mobile() {
               grid-template-columns: repeat(3, 1fr);
+              row-gap: 24px;
             }
 
             img {
@@ -856,6 +858,8 @@ header {
                 }
               }
               @include mobile() {
+                width: 70px;
+
                 &:nth-last-child(-n + 3) {
                   display: block;
                 }
@@ -1259,6 +1263,11 @@ header {
               .button {
                 padding: 16px;
                 cursor: auto;
+
+                @include mobile() {
+                  padding: 10px;
+                  font-size: 12px;
+                }
               }
             }
 

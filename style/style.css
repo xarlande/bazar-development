@@ -842,14 +842,10 @@ header[open-services] .open-header-services {
   }
 }
 #passport .container .content .last-block .card-content {
-  height: 100%;
   display: flex;
-  align-items: center;
-}
-@media screen and (max-width: 430px) {
-  #passport .container .content .last-block .card-content {
-    margin-top: 32px;
-  }
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
 }
 #passport .container .content .last-block .card-content .rows {
   flex: 1;
@@ -861,11 +857,13 @@ header[open-services] .open-header-services {
   #passport .container .content .last-block .card-content .rows {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
+    row-gap: 24px;
   }
 }
 @media screen and (max-width: 430px) {
   #passport .container .content .last-block .card-content .rows {
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 24px;
   }
 }
 #passport .container .content .last-block .card-content .rows img {
@@ -877,6 +875,9 @@ header[open-services] .open-header-services {
   }
 }
 @media screen and (max-width: 430px) {
+  #passport .container .content .last-block .card-content .rows img {
+    width: 70px;
+  }
   #passport .container .content .last-block .card-content .rows img:nth-last-child(-n+3) {
     display: block;
   }
@@ -1240,6 +1241,12 @@ header[open-services] .open-header-services {
 #our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .link-block .button {
   padding: 16px;
   cursor: auto;
+}
+@media screen and (max-width: 430px) {
+  #our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .link-block .button {
+    padding: 10px;
+    font-size: 12px;
+  }
 }
 #our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .description-block {
   display: flex;
