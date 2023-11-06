@@ -158,6 +158,11 @@ main .container {
   padding-top: 50px;
   padding-bottom: 70px;
 }
+@media screen and (max-width: 430px) {
+  main .container {
+    padding-bottom: 50px;
+  }
+}
 main .container .content {
   position: relative;
   z-index: 1;
@@ -259,6 +264,11 @@ main .container .content .content-last .content-last-wrapper .button {
   padding: 16px;
   width: 100%;
 }
+@media screen and (max-width: 430px) {
+  main .container .content .content-last .content-last-wrapper .button {
+    margin-top: 36px;
+  }
+}
 main .background-gradient {
   position: absolute;
   top: 60%;
@@ -306,7 +316,7 @@ header {
   background: rgba(25, 25, 25, 0.74);
 }
 header .header {
-  padding: 23px 40px;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   justify-items: center;
@@ -967,6 +977,9 @@ header[open-services] .open-header-services {
     font-size: 16px;
   }
 }
+#we-are .container .content .description-block .button {
+  padding: 16px;
+}
 @media screen and (max-width: 768px) {
   #we-are .container .content .description-block .button {
     width: 100%;
@@ -1134,6 +1147,7 @@ header[open-services] .open-header-services {
 }
 @media screen and (max-width: 768px) {
   #we-are3 .container .content .description-block .button {
+    padding: 16px;
     width: 100%;
   }
 }
@@ -1268,6 +1282,7 @@ header[open-services] .open-header-services {
 }
 
 #order-the-service {
+  border-top: 1px solid #d8f520;
   position: relative;
   padding-top: 100px !important;
   padding-bottom: 150px !important;
