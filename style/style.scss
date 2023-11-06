@@ -773,9 +773,18 @@ header {
 
         .card-content {
           margin-top: 22px;
+          display: flex;
+          justify-content: center;
+
+          @include tablet() {
+            display: block;
+            justify-content: unset;
+          }
 
           img {
-            width: 100%;
+            @include tablet() {
+              width: 100%;
+            }
           }
         }
       }
@@ -838,6 +847,13 @@ header {
       display: flex;
       gap: 56px;
 
+      @include tablet() {
+        gap: 20px;
+      }
+      @include mobile() {
+        flex-direction: column;
+      }
+
       .card {
         flex: auto;
         border: $toxic-color 1px solid;
@@ -849,7 +865,9 @@ header {
         }
 
         .card-title {
-          font-family: Open Sans;
+          font-family:
+            Open Sans,
+            serif;
           font-size: 24px;
           font-style: normal;
           font-weight: 600;
@@ -857,7 +875,9 @@ header {
         }
         .card-description {
           margin-top: 16px;
-          font-family: Open Sans;
+          font-family:
+            Open Sans,
+            serif;
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
@@ -866,6 +886,270 @@ header {
         }
       }
     }
+  }
+}
+
+#we-are {
+  background: $bg-gray;
+
+  .container {
+    .h2-title {
+    }
+    .content {
+      margin-top: 40px;
+      display: flex;
+      gap: 86px;
+      justify-content: center;
+
+      @include tablet() {
+        gap: 20px;
+      }
+      @include mobile() {
+        flex-direction: column;
+      }
+
+      .image-block {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        @include mobile() {
+          gap: 10px;
+          justify-content: center;
+
+          img {
+            width: 150px;
+          }
+        }
+      }
+      .description-block {
+        max-width: 505px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 32px;
+
+        @include tablet() {
+          max-width: unset;
+          gap: 16px;
+        }
+
+        .title {
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+
+        .description {
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: $text-light-gray;
+
+          @include tablet() {
+            font-size: 16px;
+          }
+        }
+
+        .button {
+          @include tablet() {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#we-are2 {
+  .container {
+    .h2-title {
+    }
+    .content {
+      margin-top: 40px;
+      display: flex;
+
+      @include tablet() {
+        flex-direction: column-reverse;
+        gap: 24px;
+      }
+
+      .description-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .description {
+          margin-top: 32px;
+          color: $text-light-gray;
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          @include tablet() {
+            margin-top: 24px;
+          }
+        }
+        .list {
+          margin-top: 56px;
+          color: $text-light-gray;
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          list-style-type: disc;
+          margin-left: 30px;
+
+          @include tablet() {
+            margin-top: 48px;
+          }
+          @include mobile() {
+            margin-top: 32px;
+          }
+        }
+      }
+      .image-block {
+        @include tablet() {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#we-are3 {
+  background: $bg-gray;
+  position: relative;
+  overflow-x: hidden;
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    .h2-title {
+    }
+    .content {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      @include tablet() {
+        margin-bottom: 25px;
+      }
+      @include mobile() {
+        flex-direction: column;
+        gap: unset;
+      }
+
+      .image-block {
+        position: relative;
+
+        @include mobile() {
+          display: inline-flex;
+          justify-content: center;
+        }
+
+        .small-image {
+          position: absolute;
+          bottom: -30px;
+          right: -50%;
+
+          @include mobile() {
+            width: 105px;
+            bottom: 0;
+            right: 50px;
+          }
+        }
+        .big-image {
+          @include mobile() {
+            width: 185px;
+          }
+        }
+      }
+      .description-block {
+        margin-top: 50px;
+        max-width: 650px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        @include tablet() {
+          margin-top: unset;
+        }
+        @include mobile() {
+          margin-top: 20px;
+        }
+
+        .title {
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .description {
+          color: $text-light-gray;
+          font-family:
+            Open Sans,
+            serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 32px;
+          margin-bottom: 24px;
+
+          @include tablet() {
+            font-size: 16px;
+          }
+          @include mobile() {
+            margin: 24px 0;
+          }
+        }
+        .button {
+          @include tablet() {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate3d(25%, -25%, 0);
   }
 }
 
