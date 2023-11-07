@@ -105,16 +105,307 @@ menuChildDropdownList.forEach(menuChildDropdown => {
   });
 });
 
+let ourProjectCurrentFilter = 'all';
+
+const ourProjectLoadData = [
+  {
+    title: 'Plumber',
+    image: 'http://localhost:63342/bazar-development/image/ourProject/image13.png',
+    description:
+      'You will get complete information about each program we offer. There are several available options according to your needs',
+    link: '',
+  },
+  {
+    title: 'Plumber',
+    image: 'http://localhost:63342/bazar-development/image/ourProject/image14.png',
+    description:
+      'You will get complete information about each program we offer. There are several available options according to your needs',
+    link: '',
+  },
+];
+const ourProjectData = {
+  all: [
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image13.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image14.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image17.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image16.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image:
+        'https://fastly.picsum.photos/id/916/1000/1000.jpg?hmac=vZFIy_I2jjSzf_Y_JCM_UH7-xPdATxuUvPCRvXARFaQ',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image:
+        'https://fastly.picsum.photos/id/916/1000/1000.jpg?hmac=vZFIy_I2jjSzf_Y_JCM_UH7-xPdATxuUvPCRvXARFaQ',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+  ],
+  landing: [
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image13.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image14.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image17.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image16.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+  ],
+  business: [
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image13.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image14.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image17.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image16.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image:
+        'https://fastly.picsum.photos/id/916/1000/1000.jpg?hmac=vZFIy_I2jjSzf_Y_JCM_UH7-xPdATxuUvPCRvXARFaQ',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image:
+        'https://fastly.picsum.photos/id/916/1000/1000.jpg?hmac=vZFIy_I2jjSzf_Y_JCM_UH7-xPdATxuUvPCRvXARFaQ',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+  ],
+  corporate: [
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image13.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image14.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image17.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image16.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image:
+        'https://fastly.picsum.photos/id/916/1000/1000.jpg?hmac=vZFIy_I2jjSzf_Y_JCM_UH7-xPdATxuUvPCRvXARFaQ',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+  ],
+  store: [
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image13.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image14.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image: 'http://localhost:63342/bazar-development/image/ourProject/image16.png',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image:
+        'https://fastly.picsum.photos/id/916/1000/1000.jpg?hmac=vZFIy_I2jjSzf_Y_JCM_UH7-xPdATxuUvPCRvXARFaQ',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+    {
+      title: 'Plumber',
+      image:
+        'https://fastly.picsum.photos/id/916/1000/1000.jpg?hmac=vZFIy_I2jjSzf_Y_JCM_UH7-xPdATxuUvPCRvXARFaQ',
+      description:
+        'You will get complete information about each program we offer. There are several available options according to your needs',
+      link: '',
+    },
+  ],
+};
+
+const ourProjectBody = document.querySelector('#our-project .content');
+const ourProjectGenerateItems = () => {
+  let content = '';
+
+  ourProjectData[ourProjectCurrentFilter].forEach(item => {
+    content += `<div class="project-block">
+            <img alt="img" src="${item.image}">
+            <div class="our-project-block">
+              <p class="title">${item.title}</p>
+              <div class="link-block">
+                <button class="button">Business card site</button><button class="button">web site development</button>
+              </div>
+              <div class="description-block">
+                <p class="description">
+                  ${item.description}
+                </p>
+                <div class="button-block">
+                  <button class="button button-rounded" onclick="(() => window.open('${item.link}', '_blank'))()"></button>
+                </div>
+              </div>
+            </div>
+            <div class="shadow"></div>
+          </div>`;
+  });
+
+  ourProjectBody.innerHTML = content;
+};
+const ourProjectDownloadMore = document.querySelector('.download-more');
+const ourProjectDownloadButton = ourProjectDownloadMore.querySelector('.download-more-button');
+const ourProjectDownloadButtonImage = ourProjectDownloadMore.querySelector('img');
+const ourProjectLoadingContent = () => {
+  ourProjectLoadData.forEach(item => {
+    let content = '';
+
+    content += `<div class="project-block">
+            <img alt="img" src="${item.image}">
+            <div class="our-project-block">
+              <p class="title">${item.title}</p>
+              <div class="link-block">
+                <button class="button">Business card site</button><button class="button">web site development</button>
+              </div>
+              <div class="description-block">
+                <p class="description">
+                  ${item.description}
+                </p>
+                <div class="button-block">
+                  <button class="button button-rounded" onclick="(() => window.open('${item.link}', '_blank'))()"></button>
+                </div>
+              </div>
+            </div>
+            <div class="shadow"></div>
+          </div>`;
+
+    ourProjectDownloadButtonImage.classList.add('rotating');
+
+    setTimeout(() => {
+      ourProjectDownloadButtonImage.classList.remove('rotating');
+      ourProjectDownloadMore.classList.add('display-none');
+      ourProjectBody.innerHTML += content;
+    }, 5000);
+  });
+};
+ourProjectGenerateItems();
+ourProjectDownloadButton.addEventListener('click', () => {
+  ourProjectLoadingContent();
+});
+
 const navigationButtonsForOurProject = document.querySelectorAll('.navigation-button');
 
 navigationButtonsForOurProject.forEach(value => {
   value.addEventListener('click', event => {
     const target = event.target;
+    const currentButton = target.closest('.navigation-button');
+    const buttonValue = currentButton.getAttribute('value');
 
-    target.closest('.navigation-button').classList.add('active');
+    ourProjectCurrentFilter = buttonValue;
+    ourProjectGenerateItems();
+    currentButton.classList.add('active');
 
     navigationButtonsForOurProject.forEach(item => {
-      if (item !== target.closest('.navigation-button')) {
+      if (item !== currentButton) {
         item.classList.remove('active');
       }
     });
