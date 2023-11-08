@@ -11,6 +11,7 @@ body {
 a {
   color: $default-white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -757,14 +758,30 @@ header {
       }
     }
     .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+      row-gap: 32px;
+
+      @include mobile(){
+        grid-template-columns: repeat(1, 1fr);
+      }
       .card {
         border-radius: 16px;
+        display: inline-block;
 
         .image-wrapper {
           background: $toxic-color;
           padding: 5px 8px;
           position: relative;
           border-radius: 16px 16px 0 0;
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
 
           .reading-time {
             border-radius: 16px 0 0 0;
@@ -773,18 +790,79 @@ header {
             left: 0;
             padding: 16px;
             background: $toxic-color;
+            color: $text-black;
+            font-family:
+              Open Sans,
+              serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
           }
         }
         &-content {
+          background: $bg-light-gray;
+          padding: 24px 16px;
+          border-radius: 0 0 16px 16px;
+
           .title {
+            color: $text-no-white-color;
+            font-family:
+              Open Sans,
+              serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
           }
           .date {
+            color: $text-light-gray;
+            font-family:
+              Open Sans,
+              serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 16px;
           }
           .tags {
+            margin: 16px 0;
+            display: flex;
+            gap: 8px;
+
             .tag {
+              font-family:
+                Open Sans,
+                serif;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              padding: 8px 16px;
+              border-radius: 32px;
+              border: 1px solid #747474;
             }
           }
           .link {
+            display: inline-flex;
+            align-items: start;
+            color: $toxic-color;
+            font-family:
+              Open Sans,
+              serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+
+            &:after {
+              display: block;
+              content: url("../image/common/arrow-up-right-green.svg");
+              margin-top: -1px;
+            }
           }
         }
       }

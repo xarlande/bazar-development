@@ -107,12 +107,121 @@ menuChildDropdownList.forEach(menuChildDropdown => {
 
 let ourProjectCurrentFilter = 'development';
 
-const ourProjectLoadData = [];
+const ourProjectLoadData = [
+  {
+    title: 'Up am intention on dependent questions oh elsewhere september.',
+    tags: ['Sorting', 'Sorting'],
+    date: '12.12.2023',
+    link: 'https://bazar.club',
+    img: 'image/ourProject/image.png',
+    time: '5 min',
+  },
+  {
+    title: 'Up am intention on dependent questions oh elsewhere september.',
+    tags: ['Sorting', 'Sorting'],
+    date: '12.12.2023',
+    link: 'https://bazar.club',
+    img: 'image/ourProject/image.png',
+    time: '5 min',
+  },
+];
 const ourProjectData = {
-  development: [],
-  seo: [],
-  marketing: [],
-  other: [],
+  development: [
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+  ],
+  seo: [
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+  ],
+  marketing: [
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+  ],
+  other: [
+    {
+      title: 'Up am intention on dependent questions oh elsewhere september.',
+      tags: ['Sorting', 'Sorting'],
+      date: '12.12.2023',
+      link: 'https://bazar.club',
+      img: 'image/ourProject/image.png',
+      time: '5 min',
+    },
+  ],
 };
 
 const ourProjectBody = document.querySelector('#our-project .content');
@@ -120,23 +229,25 @@ const ourProjectGenerateItems = () => {
   let content = '';
 
   ourProjectData[ourProjectCurrentFilter].forEach(item => {
-    content += `<div class="project-block">
-            <img alt="img" src="${item.image}">
-            <div class="our-project-block">
-              <p class="title">${item.title}</p>
-              <div class="link-block">
-                <button class="button">Business card site</button><button class="button">web site development</button>
-              </div>
-              <div class="description-block">
-                <p class="description">
-                  ${item.description}
-                </p>
-                <div class="button-block">
-                  <button class="button button-rounded" onclick="(() => window.open('${item.link}', '_blank'))()"></button>
-                </div>
-              </div>
+    let tags = '';
+
+    item?.tags.forEach(item => {
+      tags += '<p class="tag">Item</p>';
+    });
+
+    content += `<div class="card">
+            <div class="image-wrapper">
+              <img alt="" src="${item.img}">
+              <p class="reading-time">Read text: ${item.time}</p>
             </div>
-            <div class="shadow"></div>
+            <div class="card-content">
+              <p class="title">${item.title}</p>
+              <p class="date">${item.date}</p>
+              <div class="tags">
+                ${tags}
+              </div>
+              <a class="link" href="${item.link}">See more</a>
+            </div>
           </div>`;
   });
 
@@ -149,23 +260,25 @@ const ourProjectLoadingContent = () => {
   let content = '';
 
   ourProjectLoadData.forEach(item => {
-    content += `<div class="project-block">
-            <img alt="img" src="${item.image}">
-            <div class="our-project-block">
-              <p class="title">${item.title}</p>
-              <div class="link-block">
-                <button class="button">Business card site</button><button class="button">web site development</button>
-              </div>
-              <div class="description-block">
-                <p class="description">
-                  ${item.description}
-                </p>
-                <div class="button-block">
-                  <button class="button button-rounded" onclick="(() => window.open('${item.link}', '_blank'))()"></button>
-                </div>
-              </div>
+    let tags = '';
+
+    item?.tags.forEach(item => {
+      tags += '<p class="tag">Item</p>';
+    });
+
+    content += `<div class="card">
+            <div class="image-wrapper">
+              <img alt="" src="${item.img}">
+              <p class="reading-time">Read text: ${item.time}</p>
             </div>
-            <div class="shadow"></div>
+            <div class="card-content">
+              <p class="title">${item.title}</p>
+              <p class="date">${item.date}</p>
+              <div class="tags">
+                ${tags}
+              </div>
+              <a class="link" href="${item.link}">See more</a>
+            </div>
           </div>`;
   });
 
@@ -177,6 +290,7 @@ const ourProjectLoadingContent = () => {
     ourProjectBody.innerHTML += content;
   }, 5000);
 };
+ourProjectGenerateItems();
 ourProjectDownloadButton.addEventListener('click', () => {
   ourProjectLoadingContent();
 });

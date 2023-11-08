@@ -143,6 +143,7 @@ body {
 a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -775,14 +776,32 @@ header[open-services] .open-header-services {
   background: #d8f520;
   color: #252529;
 }
+#our-project .container .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  row-gap: 32px;
+}
+@media screen and (max-width: 430px) {
+  #our-project .container .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 #our-project .container .content .card {
   border-radius: 16px;
+  display: inline-block;
 }
 #our-project .container .content .card .image-wrapper {
   background: #d8f520;
   padding: 5px 8px;
   position: relative;
   border-radius: 16px 16px 0 0;
+  display: flex;
+  justify-content: center;
+}
+#our-project .container .content .card .image-wrapper img {
+  width: 100%;
+  height: 100%;
 }
 #our-project .container .content .card .image-wrapper .reading-time {
   border-radius: 16px 0 0 0;
@@ -791,6 +810,66 @@ header[open-services] .open-header-services {
   left: 0;
   padding: 16px;
   background: #d8f520;
+  color: #252529;
+  font-family: Open Sans, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#our-project .container .content .card-content {
+  background: #363638;
+  padding: 24px 16px;
+  border-radius: 0 0 16px 16px;
+}
+#our-project .container .content .card-content .title {
+  color: #efefef;
+  font-family: Open Sans, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+#our-project .container .content .card-content .date {
+  color: #d8d8d8;
+  font-family: Open Sans, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 16px;
+}
+#our-project .container .content .card-content .tags {
+  margin: 16px 0;
+  display: flex;
+  gap: 8px;
+}
+#our-project .container .content .card-content .tags .tag {
+  font-family: Open Sans, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 8px 16px;
+  border-radius: 32px;
+  border: 1px solid #747474;
+}
+#our-project .container .content .card-content .link {
+  display: inline-flex;
+  align-items: start;
+  color: #d8f520;
+  font-family: Open Sans, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+#our-project .container .content .card-content .link:after {
+  display: block;
+  content: url("../image/common/arrow-up-right-green.svg");
+  margin-top: -1px;
 }
 #our-project .container .download-more {
   margin-top: 40px;
