@@ -4,14 +4,14 @@ const mobileWidth = 431;
 const tabletWidth = 769;
 
 const swiperReviews = new Swiper('#swiper-technologies', {
-  slidesPerView: 2,
+  slidesPerView: 1,
   loop: true,
   breakpoints: {
     [mobileWidth]: {
-      slidesPerView: 4,
+      slidesPerView: 2,
     },
     [laptopWidth]: {
-      slidesPerView: 5,
+      slidesPerView: 3,
     },
   },
 });
