@@ -1747,7 +1747,7 @@ footer {
       justify-content: space-between;
       align-items: center;
 
-      @include mobile(){
+      @include mobile() {
         align-items: start;
       }
 
@@ -1794,6 +1794,30 @@ footer {
       .image-block {
         display: flex;
         gap: 8px;
+
+        .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+          &-hover {
+            display: none;
+          }
+
+          &:hover {
+            .image-hover {
+              display: block;
+            }
+            .image-no-hover {
+              display: none;
+            }
+          }
+
+          img {
+            width: 20px;
+          }
+        }
       }
     }
   }
