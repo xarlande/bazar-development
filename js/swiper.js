@@ -12,6 +12,7 @@ const swiperReviews = new Swiper('#swiper-technologies', {
       spaceBetween: 24,
     },
     [laptopWidth]: {
+      slidesPerView: 2,
       spaceBetween: 40,
     },
   },
