@@ -1271,6 +1271,24 @@ footer .footer-end-block .container .image-block {
   display: flex;
   gap: 8px;
 }
+footer .footer-end-block .container .image-block .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+footer .footer-end-block .container .image-block .image-hover {
+  display: none;
+}
+footer .footer-end-block .container .image-block .image:hover .image-hover {
+  display: block;
+}
+footer .footer-end-block .container .image-block .image:hover .image-no-hover {
+  display: none;
+}
+footer .footer-end-block .container .image-block .image img {
+  width: 20px;
+}
 
 @keyframes marquee {
   0% {

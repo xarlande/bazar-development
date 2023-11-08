@@ -1285,7 +1285,7 @@ footer {
       justify-content: space-between;
       align-items: center;
 
-      @include mobile(){
+      @include mobile() {
         align-items: start;
       }
 
@@ -1293,8 +1293,8 @@ footer {
         display: flex;
         color: $text-gray;
         font-family:
-          Open Sans,
-          serif;
+                Open Sans,
+                serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
@@ -1332,6 +1332,30 @@ footer {
       .image-block {
         display: flex;
         gap: 8px;
+
+        .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+          &-hover {
+            display: none;
+          }
+
+          &:hover {
+            .image-hover {
+              display: block;
+            }
+            .image-no-hover {
+              display: none;
+            }
+          }
+
+          img {
+            width: 20px;
+          }
+        }
       }
     }
   }
