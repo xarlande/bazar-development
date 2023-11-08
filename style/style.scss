@@ -612,15 +612,15 @@ header {
 @keyframes hoverWave {
   0% {
     box-shadow:
-            0 4px 5px rgba(216, 245, 32, 0.54),
-            0 0 0 0 rgba(216, 245, 32, 0.42),
-            0 0 0 0 rgba(216, 245, 32, 0.42);
+      0 4px 5px rgba(216, 245, 32, 0.54),
+      0 0 0 0 rgba(216, 245, 32, 0.42),
+      0 0 0 0 rgba(216, 245, 32, 0.42);
   }
   100% {
     box-shadow:
-            0 4px 5px rgba(216, 245, 32, 0.5),
-            0 0 0 15px transparent,
-            0 0 0 8px rgba(216, 245, 32, 0.3);
+      0 4px 5px rgba(216, 245, 32, 0.5),
+      0 0 0 15px transparent,
+      0 0 0 8px rgba(216, 245, 32, 0.3);
   }
 }
 
@@ -791,7 +791,9 @@ header {
           z-index: 10;
 
           .title {
-            font-family: DM Sans, serif;
+            font-family:
+              DM Sans,
+              serif;
             font-size: 28px;
             font-style: normal;
             font-weight: 700;
@@ -822,7 +824,9 @@ header {
 
             .description {
               color: $text-no-white-color;
-              font-family: Open Sans, serif;
+              font-family:
+                Open Sans,
+                serif;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
@@ -1281,10 +1285,20 @@ footer {
       justify-content: space-between;
       align-items: center;
 
+      @include mobile(){
+        align-items: start;
+      }
+
       .text-block {
         display: flex;
         color: $text-gray;
-        height: 27px;
+        font-family:
+          Open Sans,
+          serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
 
         @include mobile() {
           flex-direction: column;
@@ -1316,6 +1330,7 @@ footer {
       }
 
       .image-block {
+        display: flex;
         gap: 8px;
       }
     }
