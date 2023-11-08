@@ -718,6 +718,9 @@ header[open-services] .open-header-services {
   border-radius: 16px;
   display: inline-block;
 }
+#technologies #swiper-technologies .swiper-slide .card:hover, #first .container .last-block .content .card:hover {
+  box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
+}
 #technologies #swiper-technologies .swiper-slide .card .image-wrapper, #first .container .last-block .content .card .image-wrapper {
   background: #d8f520;
   padding: 5px 8px;
@@ -1019,10 +1022,18 @@ header[open-services] .open-header-services {
   background: #1f1f20;
 }
 #technologies #swiper-technologies {
-  margin: 40px 0;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+@media screen and (max-width: 768px) {
+  #technologies #swiper-technologies {
+    margin-top: 7px;
+  }
+}
+#technologies #swiper-technologies .swiper-slide .card {
+  margin: 25px;
 }
 #technologies .navigation-block {
-  margin-top: 32px;
   display: flex;
   justify-content: center;
   gap: 68px;
