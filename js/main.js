@@ -177,7 +177,6 @@ const ourProjectLoadingContent = () => {
     ourProjectBody.innerHTML += content;
   }, 5000);
 };
-ourProjectGenerateItems();
 ourProjectDownloadButton.addEventListener('click', () => {
   ourProjectLoadingContent();
 });
