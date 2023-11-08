@@ -1093,10 +1093,20 @@ footer {
       justify-content: space-between;
       align-items: center;
 
+      @include mobile(){
+        align-items: start;
+      }
+
       .text-block {
         display: flex;
         color: $text-gray;
-        height: 27px;
+        font-family:
+                Open Sans,
+                serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
 
         @include mobile() {
           flex-direction: column;
@@ -1128,6 +1138,7 @@ footer {
       }
 
       .image-block {
+        display: flex;
         gap: 8px;
       }
     }
