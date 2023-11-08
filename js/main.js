@@ -356,9 +356,9 @@ const ourProjectDownloadMore = document.querySelector('.download-more');
 const ourProjectDownloadButton = ourProjectDownloadMore.querySelector('.download-more-button');
 const ourProjectDownloadButtonImage = ourProjectDownloadMore.querySelector('img');
 const ourProjectLoadingContent = () => {
-  ourProjectLoadData.forEach(item => {
-    let content = '';
+  let content = '';
 
+  ourProjectLoadData.forEach(item => {
     content += `<div class="project-block">
             <img alt="img" src="${item.image}">
             <div class="our-project-block">
@@ -377,15 +377,15 @@ const ourProjectLoadingContent = () => {
             </div>
             <div class="shadow"></div>
           </div>`;
-
-    ourProjectDownloadButtonImage.classList.add('rotating');
-
-    setTimeout(() => {
-      ourProjectDownloadButtonImage.classList.remove('rotating');
-      ourProjectDownloadMore.classList.add('display-none');
-      ourProjectBody.innerHTML += content;
-    }, 5000);
   });
+
+  ourProjectDownloadButtonImage.classList.add('rotating');
+
+  setTimeout(() => {
+    ourProjectDownloadButtonImage.classList.remove('rotating');
+    ourProjectDownloadMore.classList.add('display-none');
+    ourProjectBody.innerHTML += content;
+  }, 5000);
 };
 ourProjectGenerateItems();
 ourProjectDownloadButton.addEventListener('click', () => {
