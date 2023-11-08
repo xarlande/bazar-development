@@ -9,9 +9,10 @@ const swiperReviews = new Swiper('#swiper-technologies', {
   breakpoints: {
     [mobileWidth]: {
       slidesPerView: 2,
+      spaceBetween: 24,
     },
     [laptopWidth]: {
-      slidesPerView: 3,
+      spaceBetween: 40,
     },
   },
 });
