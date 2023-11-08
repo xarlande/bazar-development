@@ -232,7 +232,7 @@ const ourProjectGenerateItems = () => {
     let tags = '';
 
     item?.tags.forEach(item => {
-      tags += '<p class="tag">Item</p>';
+      tags += `<p class="tag">${item}</p>`;
     });
 
     content += `<div class="card">
@@ -263,7 +263,7 @@ const ourProjectLoadingContent = () => {
     let tags = '';
 
     item?.tags.forEach(item => {
-      tags += '<p class="tag">Item</p>';
+      tags += `<p class="tag">${item}</p>`;
     });
 
     content += `<div class="card">
