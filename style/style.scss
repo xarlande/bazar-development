@@ -770,6 +770,10 @@ header {
         border-radius: 16px;
         display: inline-block;
 
+        &:hover{
+          box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
+        }
+
         .image-wrapper {
           background: $toxic-color;
           padding: 5px 8px;

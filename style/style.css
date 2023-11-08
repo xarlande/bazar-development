@@ -791,6 +791,9 @@ header[open-services] .open-header-services {
   border-radius: 16px;
   display: inline-block;
 }
+#our-project .container .content .card:hover {
+  box-shadow: 0 4px 35px 0 rgba(216, 245, 32, 0.44);
+}
 #our-project .container .content .card .image-wrapper {
   background: #d8f520;
   padding: 5px 8px;
