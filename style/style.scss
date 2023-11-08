@@ -776,6 +776,9 @@ header {
         @include tablet() {
           margin: 0;
         }
+        @include mobile() {
+          padding: 30px 14px;
+        }
 
         img {
           position: absolute;
@@ -812,7 +815,7 @@ header {
 
               @include mobile() {
                 padding: 10px;
-                font-size: 12px;
+                font-size: 11px;
               }
             }
           }
@@ -1293,8 +1296,8 @@ footer {
         display: flex;
         color: $text-gray;
         font-family:
-                Open Sans,
-                serif;
+          Open Sans,
+          serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
