@@ -1166,6 +1166,11 @@ header[open-services] .open-header-services {
     margin: 0;
   }
 }
+@media screen and (max-width: 430px) {
+  #our-projects .container-inner #swiper-our-project .swiper-slide .project-block {
+    padding: 30px 14px;
+  }
+}
 #our-projects .container-inner #swiper-our-project .swiper-slide .project-block img {
   position: absolute;
   top: 0;
@@ -1179,7 +1184,7 @@ header[open-services] .open-header-services {
   z-index: 10;
 }
 #our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .title {
-  font-family: DM Sans;
+  font-family: DM Sans, serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
@@ -1198,7 +1203,7 @@ header[open-services] .open-header-services {
 @media screen and (max-width: 430px) {
   #our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .link-block .button {
     padding: 10px;
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 #our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .description-block {
@@ -1208,7 +1213,7 @@ header[open-services] .open-header-services {
 }
 #our-projects .container-inner #swiper-our-project .swiper-slide .project-block .our-project-block .description-block .description {
   color: #EFEFEF;
-  font-family: Open Sans;
+  font-family: Open Sans, serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;

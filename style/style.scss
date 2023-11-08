@@ -1178,6 +1178,9 @@ header {
           @include tablet() {
             margin: 0;
           }
+          @include mobile() {
+            padding: 30px 14px;
+          }
 
           img {
             position: absolute;
@@ -1193,7 +1196,9 @@ header {
             z-index: 10;
 
             .title {
-              font-family: DM Sans;
+              font-family:
+                      DM Sans,
+                      serif;
               font-size: 28px;
               font-style: normal;
               font-weight: 700;
@@ -1212,7 +1217,7 @@ header {
 
                 @include mobile() {
                   padding: 10px;
-                  font-size: 12px;
+                  font-size: 11px;
                 }
               }
             }
@@ -1224,7 +1229,9 @@ header {
 
               .description {
                 color: $text-no-white-color;
-                font-family: Open Sans;
+                font-family:
+                        Open Sans,
+                        serif;
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 400;
@@ -1239,7 +1246,7 @@ header {
                   background: $text-no-white-color;
 
                   &:before {
-                    content: url('./../image/common/arrow-up-right-40px.svg');
+                    content: url("./../image/common/arrow-up-right-40px.svg");
                   }
                 }
               }
@@ -1252,7 +1259,12 @@ header {
             right: 0;
             left: 0;
             bottom: 0;
-            background: linear-gradient(0deg, #191919 30.2%, rgba(25, 25, 25, 0.6) 62.59%, rgba(25, 25, 25, 0) 99.91%);
+            background: linear-gradient(
+                            0deg,
+                            #191919 30.2%,
+                            rgba(25, 25, 25, 0.6) 62.59%,
+                            rgba(25, 25, 25, 0) 99.91%
+            );
           }
 
           &:hover {
